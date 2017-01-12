@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#d81e05"
+    tools:context="com.marionacaros.magicline.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Barcelona_date"
+        android:id="@+id/textView_Bcndata"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="MAGIC LINE"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        android:textSize="50dp"
+        android:id="@+id/textView_MagicLine"
+        android:layout_below="@+id/textView_Bcndata"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/SantJoandeDeu"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        android:textSize="30dp"
+        android:id="@+id/textView_SantJoandeDeu"
+        android:layout_below="@+id/textView_MagicLine"
+        android:layout_alignLeft="@+id/textView_MagicLine"
+        android:layout_alignStart="@+id/textView_MagicLine" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NO T'HO PERDIS!"
+        android:id="@+id/buttonInfo"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        android:background="@drawable/border"
+        android:layout_below="@+id/textView_SantJoandeDeu"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RUTA I HORARIS"
+        android:textSize="25dp"
+        android:id="@+id/buttonRuta"
+        android:textStyle="bold|italic"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonInfo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sant Joan de Déu"
+        android:textSize="25dp"
+        android:id="@+id/button2"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/border"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/buttonRuta"
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@+id/buttonRuta"
+        android:layout_alignEnd="@+id/buttonRuta"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/facebook"
+        android:src="@drawable/quadratfb"
+        android:background="@drawable/roundedbutton"
+        android:focusable="false"
+        android:longClickable="false"
+        android:layout_alignTop="@+id/twitter"
+        android:layout_alignLeft="@+id/textView_Bcndata"
+        android:layout_alignStart="@+id/textView_Bcndata" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/twitter"
+        android:src="@drawable/quadrattwitter"
+        android:background="@drawable/roundedbutton"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/youtube"
+        android:src="@drawable/quadratyoutube"
+        android:background="@drawable/roundedbutton"
+        android:layout_alignTop="@+id/twitter"
+        android:layout_alignRight="@+id/textView_Bcndata"
+        android:layout_alignEnd="@+id/textView_Bcndata" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMERGÈNCIA"
+        android:id="@+id/buttonemergencia"
+        android:background="#d81e05"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOBRE L&apos;APP"
+        android:id="@+id/buttonsobrelapp"
+        android:background="#d81e05"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/buttonemergencia"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2" />
+
+</RelativeLayout>

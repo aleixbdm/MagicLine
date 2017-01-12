@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MagicLine</string>
+    <string name="Barcelona_date">BARCELONA 28.02.2016</string>
+    <string name="SantJoandeDeu">SANT JOAN DE DÉU</string>
+
+    <string name="InfoMagicLine">Gaudiu del camí, feu volar la imaginació a
+    cada pas i deixeu contagiar-vos per l’esperit de la Magic Line.\nPerò recordeu: <b>amb somiar no en tenim prou!</b></string>
+
+    <string name="festatext">I, sobretot, no us perdeu la festa d´arribada amb dues activitats molt especials!\n\n<i><b>Concert
+        Música per la inclusió (17h).</b></i> Participants de diversos  projectes socials de Sant Joan de Déu i del
+        <u>Taller de músics</u> compartiran l´escenari de la Pl. de la Catedral amb <b>La Pegatina, Blaumut, Roger Mas,
+        Quico Pi de la Serra, Anna Roig, Joan Colomo i Marc Parrot</b>.\nExposició il·lustrada en viu.
+        Mentre vosaltres camineu els artistes <b>Inocuo, Matías Krahn i Eva Armisén</b>, crearan in situ una exposició
+        per explicar el sentit social de la Magic Line. Ben segur que us sorprenen!\n
+    </string>
+    <string name="text_SantJoan">La solidaritat forma part de l´ànima de l´Orde Hospitalari Sant Joan de Déu. Aquest compromís és el que ens
+        mou per construir un món més just i hospitalari amb tothom, especialment amb les persones més
+        desfavorides.\nL´Obra Social Sant Joan de Déu destina els fons recaptats amb la Magic Line a programes
+        de suport a persones en situació vulnerable: <b>ajudes socials, pisos d´inclusió, teràpies complementàries,
+        atenció a la infància hospitalitzada, cooperació internacional i recerca.</b>\n\n
+    </string>
+    <string name="cultura">Avui la ciutat us obre les portes a la <b>cultura</b>. El tubular que us acredita com a caminants us permetrà entrar lliurament a molts dels equipaments culturals de Montjuïc.\n</string>
+    <string name="llista_llocs">   - Caixa Fòrum\n - Poble Espanyol\n - MNAC\n - Fundació Miró\n - Museu Olímpic i de l’Esport\n - Estadi Olímpic\n - Jardí Botànic Històric\n
+</string>
+    <string name="sobreapp">Aquesta app és el resultat del <b>treball voluntari</b> de <b>Mariona Carós</b> i
+        <b>Joan Febrer</b>, dos estudiants de la Universitat Politècnica de Catalunya (UPC) i participants
+        del programa de voluntariat impulsat per un conveni de col·laboració entre la <b>UPC</b> i <b>l’Obra
+        Social Sant Joan de Déu</b>. L’app està protegida sota una llicència GPL (GNU), que permet la
+        còpia, distribució i modificació del codi, sempre que es continuï distribuint amb la mateixa
+        llicència GPL i es faci esment dels seus autors originals.</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_facebook">Facebook</string>
+    <string name="title_activity_sobrelapp">Sobrelapp</string>
+    <string name="title_activity_montjuic">Montjuic</string>
+    <string name="title_activity_espai">Espai</string>
+    <string name="title_activity_estadi">Estadi</string>
+    <string name="title_activity_festa">Festa</string>
+    <string name="title_activity_emergencia">Emergencia</string>
+    <string name="title_activity_sant_joan_deu">SantJoanDeu</string>
+    <string name="title_activity_soci">Soci</string>
+    <string name="title_activity_productes">Productes</string>
+    <string name="title_activity_web">Web</string>
+
+</resources>
