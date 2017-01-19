@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "DemoButtonApp";
     private Button btnRuta;
     private Button btnInfo;
+
     private static Button button;
     private static ImageButton facebookbutton;
     private static ImageButton twitterbutton;
