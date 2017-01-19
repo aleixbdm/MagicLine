@@ -52,7 +52,7 @@ public class Emergencia extends AppCompatActivity {
                         .getSystemService(Context.TELEPHONY_SERVICE);
                 telephonyManager.listen(phoneCallListener,
                         PhoneStateListener.LISTEN_CALL_STATE);
-                callIntent.setData(Uri.parse("tel:938855799"));
+                callIntent.setData(Uri.parse("tel:112"));
                 startActivity(callIntent);
             }
         } catch (ActivityNotFoundException e){
