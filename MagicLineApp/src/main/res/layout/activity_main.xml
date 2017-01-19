@@ -1,152 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#d81e05"
-    tools:context="com.marionacaros.magicline.MainActivity">
+    android:background="@color/magicRed"
+    tools:context="com.obrasocialsjd.magicline.MainActivity">
 
-    <TextView
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearlayout1"
+        android:layout_marginBottom="@dimen/elements_vertical_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/MagicLine"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold|italic"
+            android:textSize="25dp"
+            android:id="@+id/textView_MagicLine"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/facebook"
+            android:src="@drawable/facebook_48"
+            android:adjustViewBounds="false"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/twitter"
+            android:src="@drawable/twitter_48"
+            android:adjustViewBounds="false"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/youtube"
+            android:src="@drawable/youtube_48"
+            android:adjustViewBounds="false"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewpager"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Barcelona_date"
-        android:id="@+id/textView_Bcndata"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold|italic"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="0dp"
+        android:layout_weight="0.55"
+        android:layout_marginBottom="@dimen/elements_vertical_margin">
+    </android.support.v4.view.ViewPager>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="MAGIC LINE"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold|italic"
-        android:textSize="50dp"
-        android:id="@+id/textView_MagicLine"
-        android:layout_below="@+id/textView_Bcndata"
-        android:layout_centerHorizontal="true" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/radiogroup">
+    </RadioGroup>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/SantJoandeDeu"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold|italic"
-        android:textSize="30dp"
-        android:id="@+id/textView_SantJoandeDeu"
-        android:layout_below="@+id/textView_MagicLine"
-        android:layout_alignLeft="@+id/textView_MagicLine"
-        android:layout_alignStart="@+id/textView_MagicLine" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:id="@+id/linearlayout2"
+        android:layout_marginBottom="@dimen/elements_vertical_margin">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NO T'HO PERDIS!"
-        android:id="@+id/buttonInfo"
-        android:textSize="25dp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold|italic"
-        android:background="@drawable/border"
-        android:layout_below="@+id/textView_SantJoandeDeu"
-        android:layout_marginTop="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@null">
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_style"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/elements_vertical_margin2">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RUTA I HORARIS"
-        android:textSize="25dp"
-        android:id="@+id/buttonRuta"
-        android:textStyle="bold|italic"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/border"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/buttonInfo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button1"
+                    android:textSize="@dimen/size_text_buttons"
+                    android:text="@string/button1"
+                    android:drawableLeft="@mipmap/ic_place_white_48dp"
+                    android:paddingBottom="@dimen/padding_buttons"
+                    android:paddingLeft="@dimen/padding_buttons"
+                    android:paddingRight="@dimen/padding_buttons"
+                    android:paddingTop="@dimen/padding_buttons"
+                    android:background="@null"/>
 
+            </FrameLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sant Joan de Déu"
-        android:textSize="25dp"
-        android:id="@+id/button2"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/border"
-        android:textStyle="bold|italic"
-        android:layout_below="@+id/buttonRuta"
-        android:layout_marginTop="20dp"
-        android:layout_alignRight="@+id/buttonRuta"
-        android:layout_alignEnd="@+id/buttonRuta"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_style"
+                android:layout_marginBottom="@dimen/elements_vertical_margin2">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/facebook"
-        android:src="@drawable/quadratfb"
-        android:background="@drawable/roundedbutton"
-        android:focusable="false"
-        android:longClickable="false"
-        android:layout_alignTop="@+id/twitter"
-        android:layout_alignLeft="@+id/textView_Bcndata"
-        android:layout_alignStart="@+id/textView_Bcndata" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button2"
+                    android:textSize="@dimen/size_text_buttons"
+                    android:text="@string/button2"
+                    android:drawableLeft="@mipmap/ic_palette_white_48dp"
+                    android:paddingBottom="@dimen/padding_buttons"
+                    android:paddingLeft="@dimen/padding_buttons"
+                    android:paddingRight="@dimen/padding_buttons"
+                    android:paddingTop="@dimen/padding_buttons"
+                    android:background="@null"/>
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/twitter"
-        android:src="@drawable/quadrattwitter"
-        android:background="@drawable/roundedbutton"
-        android:layout_below="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+            </FrameLayout>
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/youtube"
-        android:src="@drawable/quadratyoutube"
-        android:background="@drawable/roundedbutton"
-        android:layout_alignTop="@+id/twitter"
-        android:layout_alignRight="@+id/textView_Bcndata"
-        android:layout_alignEnd="@+id/textView_Bcndata" />
+        </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EMERGÈNCIA"
-        android:id="@+id/buttonemergencia"
-        android:background="#d81e05"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="20dp" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@null">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SOBRE L&apos;APP"
-        android:id="@+id/buttonsobrelapp"
-        android:background="#d81e05"
-        android:textSize="20dp"
-        android:layout_alignTop="@+id/buttonemergencia"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_style"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/elements_vertical_margin2">
 
-</RelativeLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button3"
+                    android:textSize="@dimen/size_text_buttons"
+                    android:text="@string/button3"
+                    android:drawableLeft="@mipmap/ic_tag_faces_white_48dp"
+                    android:paddingBottom="@dimen/padding_buttons"
+                    android:paddingLeft="@dimen/padding_buttons"
+                    android:paddingRight="@dimen/padding_buttons"
+                    android:paddingTop="@dimen/padding_buttons"
+                    android:background="@null" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_style"
+                android:layout_marginBottom="@dimen/elements_vertical_margin2">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button4"
+                    android:textSize="@dimen/size_text_buttons"
+                    android:text="@string/button4"
+                    android:drawableLeft="@mipmap/ic_call_white_48dp"
+                    android:paddingBottom="@dimen/padding_buttons"
+                    android:paddingLeft="@dimen/padding_buttons"
+                    android:paddingRight="@dimen/padding_buttons"
+                    android:paddingTop="@dimen/padding_buttons"
+                    android:background="@null"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/SantJoandeDeu"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold|italic"
+            android:textSize="20dp"
+            android:id="@+id/textView_SantJoandeDeu"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </LinearLayout>
+
+</LinearLayout>

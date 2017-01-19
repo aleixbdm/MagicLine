@@ -10,7 +10,7 @@ public class Facebook extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_facebook);
-        String url = "https://www.facebook.com/bml.santjoandedeu";
+        String url = "https://www.facebook.com/solidaridadSJD";
         WebView view = (WebView) this.findViewById(R.id.webViewfacebook);
         view.getSettings().setJavaScriptEnabled(true);
         view.loadUrl(url);
