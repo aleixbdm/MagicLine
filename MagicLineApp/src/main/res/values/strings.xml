@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">MagicLine</string>
-    <string name="Barcelona_date">BARCELONA 28.02.2016</string>
-    <string name="SantJoandeDeu">SANT JOAN DE DÉU</string>
+    <string name="Barcelona_date">BARCELONA 05.03.2017</string>
+    <string name="SantJoandeDeu">SANT JOAN DE DÉU \</string>
+    <string name="MagicLine">MAGIC LINE \</string>
 
     <string name="InfoMagicLine">Gaudiu del camí, feu volar la imaginació a
     cada pas i deixeu contagiar-vos per l’esperit de la Magic Line.\nPerò recordeu: <b>amb somiar no en tenim prou!</b></string>
@@ -40,5 +41,15 @@
     <string name="title_activity_soci">Soci</string>
     <string name="title_activity_productes">Productes</string>
     <string name="title_activity_web">Web</string>
+
+    <string name="button1">MAPA I PUNTS D\'INTERÈS \</string>
+    <string name="button2">ML CULTURAL \</string>
+    <string name="button3">GIMCANA \</string>
+    <string name="button4">EMERGÈNCIES \</string>
+
+    <string name="pop_up_title">TRUCADA D\'EMERGÈNCIES</string>
+    <string name="pop_up_question">Vols trucar al 112?</string>
+    <string name="pop_up_answer1">Cancel·lar</string>
+    <string name="pop_up_answer2">Trucar</string>
 
 </resources>
