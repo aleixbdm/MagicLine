@@ -1,11 +1,7 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.marionacaros.magicline.MapActivity">
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -17,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_route_10km"
-            android:id="@+id/button_10km"
+            android:id="@+id/button_10km2"
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:background="@drawable/roundedbutton"
@@ -29,8 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_route_15km"
-            android:id="@+id/button_15km"
-            android:textColor="#000000"
+            android:id="@+id/button_15km2"
+            android:textColor="#ffffff"
             android:textStyle="bold"
             android:background="@drawable/roundedbutton"
             android:padding="1dp"
@@ -42,8 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_route_20km"
-            android:id="@+id/button_20km"
-            android:textColor="#000000"
+            android:id="@+id/button_20km2"
+            android:textColor="#ffffff"
             android:textStyle="bold"
             android:background="@drawable/roundedbutton"
             android:padding="1dp"
@@ -55,8 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_route_30km"
-            android:id="@+id/button_30km"
-            android:textColor="#000000"
+            android:id="@+id/button_30km2"
+            android:textColor="#ffffff"
             android:textStyle="bold"
             android:background="@drawable/roundedbutton"
             android:padding="1dp"
@@ -68,8 +64,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_route_40km"
-            android:id="@+id/button_40km"
-            android:textColor="#000000"
+            android:id="@+id/button_40km2"
+            android:textColor="#ffffff"
             android:textStyle="bold"
             android:background="@drawable/roundedbutton"
             android:padding="1dp"
@@ -79,4 +75,4 @@
 
     </LinearLayout>
 
-</fragment>
+</RelativeLayout>

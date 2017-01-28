@@ -56,4 +56,12 @@
     <string name="check_permission_maps">Has de permetre permisos de localització</string>
     <string name="check_permission_storage">Has de permetre permisos de emmagatzematge</string>
 
+    <string name="button_route_10km">10</string>
+    <string name="button_route_15km">15</string>
+    <string name="button_route_20km">20</string>
+    <string name="button_route_30km">30</string>
+    <string name="button_route_40km">40</string>
+
+
+
 </resources>
