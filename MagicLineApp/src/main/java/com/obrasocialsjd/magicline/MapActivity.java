@@ -17,6 +17,8 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -37,6 +39,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -47,6 +50,8 @@ import com.google.maps.android.kml.KmlPlacemark;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback
@@ -81,8 +86,16 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
     private Button button_30km;
     private Button button_40km;
     private Button actual_button;
+    private ImageButton button_hide_markers;
+
+    private boolean markers_are_hidden = true;
+
+    private static int INITIAL_DEPARTURE = 10;
 
     private KmlLayer layerMap;
+
+    private ArrayList<Marker> arrayListMarker = new ArrayList<>();
+    private HashMap<Integer, Marker> hashMapMarkerDepartures = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -239,13 +252,17 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
         setMarker("Castell de Montjuïc", "Visita gratuïta de 15 - 17:15 h.", 41.36402, 2.16677, R.drawable.museu);
 
         //Sortides
-        /*
-        setMarker("Sortida 42 km. Can Cuiàs", "Sortides de 7:00 - 7:30 h. Tancament: 7:50 h", 41.46001, 2.16822, R.drawable.sortida);
-        setMarker("Sortida 30 km. Parc de les Aigües", " Sortides: 8:00 - 9:00 h. Tancament: 9:30 h", 41.4124, 2.16605, R.drawable.sortida);
-        setMarker("Sortida 20 km. Vallvidrera", "sortides: 9:00 - 11:00 h. Tancament: 11:20 h", 41.41419, 2.10518, R.drawable.sortida);
-        setMarker("Sortida 10 km. Font de Montjuïc", "sortida: 10:00 - 12:00 h. Tancament: 12:20 h", 41.370, 2.150, R.drawable.sortida);
-        */
 
+        setMarkerDeparture(40,"Sortida 40 km. Can Cuiàs", "Sortides de 7:00 - 7:30 h. Tancament: 7:50 h",
+                41.46001, 2.16822, R.drawable.sortida);
+        setMarkerDeparture(30,"Sortida 30 km. Parc de les Aigües", " Sortides: 8:00 - 9:00 h. Tancament: 9:30 h",
+                41.4124, 2.16605, R.drawable.sortida);
+        setMarkerDeparture(20,"Sortida 20 km. Vallvidrera", "sortides: 9:00 - 11:00 h. Tancament: 11:20 h",
+                41.41419, 2.10518, R.drawable.sortida);
+        setMarkerDeparture(15,"Sortida 15 km. Hospital Sant Joan de Déu", "sortida: ? h. Tancament: ? h",
+                41.3847645 , 2.1024492, R.drawable.sortida);
+        setMarkerDeparture(10,"Sortida 10 km. Font de Montjuïc", "sortida: 10:00 - 12:00 h. Tancament: 12:20 h",
+                41.370, 2.150, R.drawable.sortida);
 
         LatLng pos = new LatLng(41.42188, 2.16504);
         int zoom = 12; //zoom has to be an integer 0-18
@@ -253,32 +270,26 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.moveCamera(update);
 
+        //Hide all markers at the beginning
+        hideMarkers();
+        hideShowDepartureMarkers(INITIAL_DEPARTURE);
+
+        //Button my location
+
+        // Get the button view
+        View locationButton = ((View) viewFragment.findViewById(Integer.parseInt("1")).getParent()).findViewById(Integer.parseInt("2"));
+
+        // and next place it, for exemple, on bottom right (as Google Maps app)
+        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) locationButton.getLayoutParams();
+        // position on right bottom
+        rlp.addRule(RelativeLayout.ALIGN_PARENT_TOP, 0);
+        rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+        rlp.setMargins(0, 0, 30, 30);
+
+
         //ROUTES
         try {
             layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_10, getApplicationContext());
-            for (KmlContainer container : layerMap.getContainers()) {
-                for(Object object : container.getProperties()){
-                    System.out.println(object.toString());
-                    System.out.println(container.getProperty(object.toString()));
-                }
-
-                for (KmlPlacemark kmlPlacemark : container.getPlacemarks()){
-                    System.out.println("Placemark: "+kmlPlacemark.toString());
-                    for(Object object : kmlPlacemark.getProperties()){
-                        System.out.println(object.toString());
-                        System.out.println(kmlPlacemark.getProperty(object.toString()));
-                    }
-                }
-            }
-
-            for(KmlPlacemark kmlPlacemark : layerMap.getPlacemarks()){
-                System.out.println(kmlPlacemark.toString());
-                for(Object object : kmlPlacemark.getProperties()){
-                    System.out.println(object.toString());
-                    System.out.println(kmlPlacemark.getProperty(object.toString()));
-                }
-            }
-
             layerMap.addLayerToMap();
         } catch (XmlPullParserException e) {
             e.printStackTrace();
@@ -294,6 +305,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 actual_button.setTextColor(getResources().getColor(R.color.buttonNotPressed));
                 actual_button = button_10km;
                 actual_button.setTextColor(getResources().getColor(R.color.buttonPressed));
+                hideShowDepartureMarkers(10);
                 layerMap.removeLayerFromMap();
                 try {
                     layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_10, getApplicationContext());
@@ -313,6 +325,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 actual_button.setTextColor(getResources().getColor(R.color.buttonNotPressed));
                 actual_button = button_15km;
                 actual_button.setTextColor(getResources().getColor(R.color.buttonPressed));
+                hideShowDepartureMarkers(15);
                 layerMap.removeLayerFromMap();
                 try {
                     layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_15, getApplicationContext());
@@ -332,6 +345,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 actual_button.setTextColor(getResources().getColor(R.color.buttonNotPressed));
                 actual_button = button_20km;
                 actual_button.setTextColor(getResources().getColor(R.color.buttonPressed));
+                hideShowDepartureMarkers(20);
                 layerMap.removeLayerFromMap();
                 try {
                     layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_20, getApplicationContext());
@@ -351,6 +365,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 actual_button.setTextColor(getResources().getColor(R.color.buttonNotPressed));
                 actual_button = button_30km;
                 actual_button.setTextColor(getResources().getColor(R.color.buttonPressed));
+                hideShowDepartureMarkers(30);
                 layerMap.removeLayerFromMap();
                 try {
                     layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_30, getApplicationContext());
@@ -370,6 +385,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 actual_button.setTextColor(getResources().getColor(R.color.buttonNotPressed));
                 actual_button = button_40km;
                 actual_button.setTextColor(getResources().getColor(R.color.buttonPressed));
+                hideShowDepartureMarkers(40);
                 layerMap.removeLayerFromMap();
                 try {
                     layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_40, getApplicationContext());
@@ -379,6 +395,16 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 } catch (XmlPullParserException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+
+        button_hide_markers = (ImageButton) viewFragment.findViewById(R.id.button_show_markers);
+        button_hide_markers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                markers_are_hidden = !markers_are_hidden;
+                if (markers_are_hidden) hideMarkers();
+                else showMarkers();
             }
         });
     }
@@ -391,8 +417,38 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 .title(title)
                 .snippet(text)
                 .icon(BitmapDescriptorFactory.fromResource(resourceId));
-        mMap.addMarker(markerOptions);
+        Marker marker = mMap.addMarker(markerOptions);
+        arrayListMarker.add(marker);
+    }
 
+    private void setMarkerDeparture(int km, String title, String text, double tal, double lon, int resourceId){
+        MarkerOptions markerOptions = new MarkerOptions()
+                .position(new LatLng(tal, lon))
+                .title(title)
+                .snippet(text)
+                .icon(BitmapDescriptorFactory.fromResource(resourceId));
+        Marker marker = mMap.addMarker(markerOptions);
+        hashMapMarkerDepartures.put(km,marker);
+    }
+
+    private void hideMarkers(){
+        for (Marker marker : arrayListMarker){
+            marker.setVisible(false);
+        }
+    }
+
+    private void hideShowDepartureMarkers(int km){
+        //Hide all besides the km passed
+        for (int kmaux : hashMapMarkerDepartures.keySet()){
+            if (kmaux != km) hashMapMarkerDepartures.get(kmaux).setVisible(false);
+            else hashMapMarkerDepartures.get(kmaux).setVisible(true);
+        }
+    }
+
+    private void showMarkers(){
+        for (Marker marker : arrayListMarker){
+            marker.setVisible(true);
+        }
     }
 
     @Override
