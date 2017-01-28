@@ -65,6 +65,13 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB6eZCTa_EecfXVKNqmLz4NJ5HVOJraRJc" />
 
+        <!-- [START fcm_default_icon] -->
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_directions_walk_black_24dp" />
+
         <service
             android:name=".MyFirebaseMessagingService">
             <intent-filter>
