@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "991851627912",
+    "firebase_url": "https://magicline-157009.firebaseio.com",
+    "project_id": "magicline-157009",
+    "storage_bucket": "magicline-157009.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991851627912:android:760eb7ae5f6be44c",
+        "android_client_info": {
+          "package_name": "com.obrasocialsjd.magicline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991851627912-vh4i1s8s7kd2nra0big1nft56254nda2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obrasocialsjd.magicline",
+            "certificate_hash": "81C9EB7156C62D6F4C364F83844E5FFBFA41799C"
+          }
+        },
+        {
+          "client_id": "991851627912-kitjcqi6sqtshhb4fn557amam89rc90r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcyzfzjFWJWGKPufTyUcSDKSUUJMDMVU0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991851627912-kitjcqi6sqtshhb4fn557amam89rc90r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
