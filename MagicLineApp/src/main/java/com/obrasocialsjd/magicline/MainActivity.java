@@ -23,6 +23,8 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.google.firebase.iid.FirebaseInstanceId;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -72,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
         //ButtonCalculs();
 
         CheckPermissions();
+
+        GetTokenId();
     }
 
     private void CheckPermissions(){
@@ -91,6 +95,15 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(activity, new String[]
                     {Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSION_WRITE_EXTERNAL_STORAGE_REQUEST);
         }
+    }
+
+    private void GetTokenId(){
+        Log.i("MyFirebaseIIDService", "Getting token");
+        // Get token
+        String token = FirebaseInstanceId.getInstance().getToken();
+
+        // Log
+        Log.i("MyFirebaseIIDService", token);
     }
 
     private void CreationImagesViewPager() {
