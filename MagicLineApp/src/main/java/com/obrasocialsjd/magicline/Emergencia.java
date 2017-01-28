@@ -16,11 +16,11 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Emergencia extends AppCompatActivity {
 
     private static Activity activity;
-    private static int MY_PERMISSION_CAL_PHONE_REQUEST;
     private static PhoneCallListener phoneCallListener;
 
     @Override
@@ -40,13 +40,7 @@ public class Emergencia extends AppCompatActivity {
         try {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             int permissionCheck = ContextCompat.checkSelfPermission(activity, Manifest.permission.CALL_PHONE);
-            if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CALL_PHONE}, MY_PERMISSION_CAL_PHONE_REQUEST);
-            }
-            else {
-                MY_PERMISSION_CAL_PHONE_REQUEST = PackageManager.PERMISSION_GRANTED;
-            }
-            if (MY_PERMISSION_CAL_PHONE_REQUEST == PackageManager.PERMISSION_GRANTED) {
+            if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
                 phoneCallListener = new PhoneCallListener();
                 TelephonyManager telephonyManager = (TelephonyManager) this
                         .getSystemService(Context.TELEPHONY_SERVICE);
@@ -54,6 +48,9 @@ public class Emergencia extends AppCompatActivity {
                         PhoneStateListener.LISTEN_CALL_STATE);
                 callIntent.setData(Uri.parse("tel:112"));
                 startActivity(callIntent);
+            }
+            else {
+                Toast.makeText(getBaseContext(), R.string.check_permission_phone, Toast.LENGTH_LONG).show();
             }
         } catch (ActivityNotFoundException e){
             Log.e("Android exception", "Call failed", e);

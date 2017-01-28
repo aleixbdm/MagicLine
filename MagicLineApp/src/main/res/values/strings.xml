@@ -52,4 +52,8 @@
     <string name="pop_up_answer1">Cancel·lar</string>
     <string name="pop_up_answer2">Trucar</string>
 
+    <string name="check_permission_phone">Has de permetre permisos de trucada</string>
+    <string name="check_permission_maps">Has de permetre permisos de localització</string>
+    <string name="check_permission_storage">Has de permetre permisos de emmagatzematge</string>
+
 </resources>
