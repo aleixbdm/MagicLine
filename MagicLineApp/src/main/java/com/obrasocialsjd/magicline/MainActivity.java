@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         String token = FirebaseInstanceId.getInstance().getToken();
 
         // Log
-        Log.i("MyFirebaseIIDService", token);
+        // Log.i("MyFirebaseIIDService", token);
     }
 
     private void CreationImagesViewPager() {
