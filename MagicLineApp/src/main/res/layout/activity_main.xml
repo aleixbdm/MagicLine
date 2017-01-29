@@ -20,25 +20,27 @@
         android:id="@+id/linearlayout1"
         android:layout_marginBottom="@dimen/elements_vertical_margin">
 
-        <TextView
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/announcements"
+            android:layout_weight="2"
+            android:src="@drawable/ic_announcement_white_48dp"
+            android:background="@color/transparent"
+            android:foreground="@drawable/ic_fiber_new_white_18dp"
+            android:foregroundGravity="bottom|right"
+            android:foregroundTint="@color/alertColor" />
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/MagicLine"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold|italic"
-            android:textSize="25dp"
-            android:id="@+id/textView_MagicLine"
-            android:layout_alignParentLeft="true"
-            android:layout_gravity="center"/>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
+            app:srcCompat="@drawable/magiclinetransparencishort"
+            android:id="@+id/imageView5"
+            android:layout_weight="1.5"
+            android:scaleType="centerInside" />
 
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/facebook"
             android:src="@drawable/facebook_48"
@@ -46,12 +48,11 @@
             android:background="@null"
             android:scaleType="fitCenter"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="5dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_weight="2" />
 
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/twitter"
             android:src="@drawable/twitter_48"
@@ -59,12 +60,11 @@
             android:background="@null"
             android:scaleType="fitCenter"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_weight="2" />
 
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/youtube"
             android:src="@drawable/youtube_48"
@@ -73,9 +73,8 @@
             android:scaleType="fitCenter"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_weight="2" />
 
     </LinearLayout>
 

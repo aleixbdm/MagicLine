@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">MagicLine</string>
     <string name="Barcelona_date">BARCELONA 05.03.2017</string>
-    <string name="SantJoandeDeu">SANT JOAN DE DÉU \</string>
-    <string name="MagicLine">MAGIC LINE \</string>
+    <string name="SantJoandeDeu">SANT JOAN DE DÉU</string>
+    <string name="MagicLine">MAGIC\nLINE</string>
 
     <string name="InfoMagicLine">Gaudiu del camí, feu volar la imaginació a
     cada pas i deixeu contagiar-vos per l’esperit de la Magic Line.\nPerò recordeu: <b>amb somiar no en tenim prou!</b></string>
