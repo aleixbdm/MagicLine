@@ -2,41 +2,44 @@ package com.obrasocialsjd.magicline.Announcements;
 
 public class ListModel {
 
-    private  String CompanyName="";
-    private  String Image="";
-    private  String Url="";
+    private  String image="";
+    private  String title="";
+    private  String text="";
+    private  String time="";
 
     /*********** Set Methods ******************/
 
-    public void setCompanyName(String CompanyName)
-    {
-        this.CompanyName = CompanyName;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public void setImage(String Image)
-    {
-        this.Image = Image;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public void setUrl(String Url)
-    {
-        this.Url = Url;
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     /*********** Get Methods ****************/
 
-    public String getCompanyName()
-    {
-        return this.CompanyName;
+    public String getImage() {
+        return this.image;
     }
 
-    public String getImage()
-    {
-        return this.Image;
+    public String getTitle() {
+        return this.title;
     }
 
-    public String getUrl()
-    {
-        return this.Url;
+    public String getText() {
+        return this.text;
+    }
+
+    public String getTime() {
+        return this.time;
     }
 }

@@ -42,19 +42,20 @@ public class AnnouncementActivity extends Activity {
         public void setListData()
         {
 
-            for (int i = 0; i < 11; i++) {
+            if (getApplicationContext() != null) {
+                DatabaseAnnouncements databaseAnnouncements = new DatabaseAnnouncements(getApplicationContext());
+                for (AnnouncementDB announcementDB :
+                        databaseAnnouncements.getAllAnnouncement(DatabaseAnnouncements.TABLE_ANNOUNCEMENTSDOWNLOADED)){
+                    final ListModel sched = new ListModel();
 
-                final ListModel sched = new ListModel();
+                    sched.setTitle(announcementDB.get_title());
+                    sched.setText(announcementDB.get_text());
+                    sched.setTime(announcementDB.get_time());
 
-                /******* Firstly take data in model object ******/
-                sched.setCompanyName("Company "+i);
-                sched.setImage("image"+i);
-                sched.setUrl("http:\\www."+i+".com");
-
-                /******** Take Model Object in ArrayList **********/
-                CustomListViewValuesArr.add( sched );
+                    /******** Take Model Object in ArrayList **********/
+                    CustomListViewValuesArr.add( sched );
+                }
             }
-
         }
 
 
@@ -66,10 +67,10 @@ public class AnnouncementActivity extends Activity {
 
             // SHOW ALERT
 
-            Toast.makeText(CustomListView,
+            /*Toast.makeText(CustomListView,
                     ""+tempValues.getCompanyName()
                             +"Image:"+tempValues.getImage()
                 +"Url:"+tempValues.getUrl(),Toast.LENGTH_LONG)
-            .show();
+            .show();*/
         }
     }

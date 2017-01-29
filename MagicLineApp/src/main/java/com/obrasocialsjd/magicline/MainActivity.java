@@ -24,6 +24,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.obrasocialsjd.magicline.Announcements.AnnouncementActivity;
 
 import java.util.Timer;
@@ -80,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
         CheckPermissions();
 
         GetTokenId();
+
+        SubscribeToAnnouncements();
     }
 
     private void CheckPermissions(){
@@ -316,6 +319,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ButtonCalculs() {
+    }
+
+    private void SubscribeToAnnouncements(){
+        FirebaseMessaging.getInstance().subscribeToTopic("announcements");
+        Log.i("FirebaseTopics","Subscribed");
     }
 
 }

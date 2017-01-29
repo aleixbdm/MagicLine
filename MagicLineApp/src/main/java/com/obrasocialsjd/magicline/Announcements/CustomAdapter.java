@@ -59,9 +59,9 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
     /********* Create a holder Class to contain inflated xml file elements *********/
     public static class ViewHolder{
 
-        public TextView text;
-        public TextView text1;
-        public TextView textWide;
+        public TextView title;
+        public TextView time;
+        public TextView message;
         public ImageView image;
 
     }
@@ -80,9 +80,10 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
             /****** View Holder Object to contain tabitem.xml file elements ******/
 
             holder = new ViewHolder();
-            holder.text = (TextView) vi.findViewById(R.id.text);
-            holder.text1=(TextView)vi.findViewById(R.id.text1);
-            holder.image=(ImageView)vi.findViewById(R.id.image);
+            holder.title = (TextView) vi.findViewById(R.id.announcements_title);
+            holder.message=(TextView)vi.findViewById(R.id.announcements_message);
+            holder.time=(TextView)vi.findViewById(R.id.announcements_time);
+            holder.image=(ImageView)vi.findViewById(R.id.announcements_image);
 
             /************  Set holder with LayoutInflater ************/
             vi.setTag( holder );
@@ -92,8 +93,7 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
 
         if(data.size()<=0)
         {
-            holder.text.setText("No Data");
-
+            //Nothing to do
         }
         else
         {
@@ -103,11 +103,12 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
 
             /************  Set Model values in Holder elements ***********/
 
-            holder.text.setText( tempValues.getCompanyName() );
-            holder.text1.setText( tempValues.getUrl() );
+            holder.title.setText( tempValues.getTitle() );
+            holder.message.setText( tempValues.getText() );
+            holder.time.setText( tempValues.getTime() );
             holder.image.setImageResource(
                     res.getIdentifier(
-                            "com.androidexample.customlistview:drawable/"+tempValues.getImage()
+                            "com.obrasocialsjd.magicline:drawable/magiclineicono"
                             ,null,null));
 
             /******** Set Item Click Listner for LayoutInflater for each row *******/
