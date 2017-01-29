@@ -24,6 +24,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.obrasocialsjd.magicline.Announcements.AnnouncementActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private static ImageButton facebookbutton;
     private static ImageButton twitterbutton;
     private static ImageButton youtubebutton;
+    private static ImageButton announcements;
 
     private static ViewPager viewPager;
     private static int page;
@@ -72,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
         /*Buttontosobrelapp();
         ButtonSantJoanDeu();*/
         //ButtonCalculs();
+
+        ButtonAnnouncements();
 
         CheckPermissions();
 
@@ -299,6 +303,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }*/
+
+    public void ButtonAnnouncements(){
+        announcements = (ImageButton) findViewById(R.id.announcements);
+        announcements.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AnnouncementActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     private void ButtonCalculs() {
     }
