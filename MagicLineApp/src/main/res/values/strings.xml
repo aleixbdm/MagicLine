@@ -4,43 +4,45 @@
     <string name="SantJoandeDeu">SANT JOAN DE DÉU</string>
     <string name="MagicLine">MAGIC\nLINE</string>
 
+
     <string name="InfoMagicLine">Gaudiu del camí, feu volar la imaginació a
     cada pas i deixeu contagiar-vos per l’esperit de la Magic Line.\nPerò recordeu: <b>amb somiar no en tenim prou!</b></string>
 
-    <string name="festatext">I, sobretot, no us perdeu la festa d´arribada amb dues activitats molt especials!\n\n<i><b>Concert
-        Música per la inclusió (17h).</b></i> Participants de diversos  projectes socials de Sant Joan de Déu i del
-        <u>Taller de músics</u> compartiran l´escenari de la Pl. de la Catedral amb <b>La Pegatina, Blaumut, Roger Mas,
-        Quico Pi de la Serra, Anna Roig, Joan Colomo i Marc Parrot</b>.\nExposició il·lustrada en viu.
-        Mentre vosaltres camineu els artistes <b>Inocuo, Matías Krahn i Eva Armisén</b>, crearan in situ una exposició
-        per explicar el sentit social de la Magic Line. Ben segur que us sorprenen!\n
-    </string>
-    <string name="text_SantJoan">La solidaritat forma part de l´ànima de l´Orde Hospitalari Sant Joan de Déu. Aquest compromís és el que ens
+    <string name="titol_SantJoan">Obra Social Sant Joan de Déu</string>
+    <string name="text_SantJoan">La solidaritat forma part de l\'ànima de l\'Orde Hospitalari Sant Joan de Déu. Aquest compromís és el que ens
         mou per construir un món més just i hospitalari amb tothom, especialment amb les persones més
-        desfavorides.\nL´Obra Social Sant Joan de Déu destina els fons recaptats amb la Magic Line a programes
-        de suport a persones en situació vulnerable: <b>ajudes socials, pisos d´inclusió, teràpies complementàries,
-        atenció a la infància hospitalitzada, cooperació internacional i recerca.</b>\n\n
+        desfavorides.\n \n L\'Obra Social Sant Joan de Déu destina els fons recaptats amb la Magic Line a programes
+        de suport a persones en situació vulnerable: <b>ajudes socials</b>, <b>pisos d´inclusió</b>, <b>teràpies complementàries</b>,
+        <b>atenció a la infància hospitalitzada</b>, <b>cooperació internacional</b> i <b>recerca</b>. \n \n
     </string>
-    <string name="cultura">Avui la ciutat us obre les portes a la <b>cultura</b>. El tubular que us acredita com a caminants us permetrà entrar lliurament a molts dels equipaments culturals de Montjuïc.\n</string>
-    <string name="llista_llocs">   - Caixa Fòrum\n - Poble Espanyol\n - MNAC\n - Fundació Miró\n - Museu Olímpic i de l’Esport\n - Estadi Olímpic\n - Jardí Botànic Històric\n
-</string>
-    <string name="sobreapp">Aquesta app és el resultat del <b>treball voluntari</b> de <b>Mariona Carós</b> i
-        <b>Joan Febrer</b>, dos estudiants de la Universitat Politècnica de Catalunya (UPC) i participants
-        del programa de voluntariat impulsat per un conveni de col·laboració entre la <b>UPC</b> i <b>l’Obra
-        Social Sant Joan de Déu</b>. L’app està protegida sota una llicència GPL (GNU), que permet la
-        còpia, distribució i modificació del codi, sempre que es continuï distribuint amb la mateixa
-        llicència GPL i es faci esment dels seus autors originals.</string>
+    <string name="pagina_web">solidaritat.santjoandedeu.org</string>
+
+    <string name="SobreApp">Sobre l\'App</string>
+    <string name="sobreapp">\t Aquesta aplicació és el resultat del <b>treball voluntari</b> de quatre estudiants de la Universitat Politècnica de
+        Catalunya (UPC) i participants del programa de voluntariat impulsat per un conveni de col·laboració entre la <b>UPC</b> i <b>l’Obra
+        Social Sant Joan de Déu</b>. \n \n
+        \t La primera versió que es va posar en marxa va ser creada per <b>Mariona Carós</b> i <b>Joan Febrer</b> i es va utilitzar en la caminada
+        solidària del 28 de Febrer de 2016. La segona i actual versió ha estat dissenyada per <b>Aleix Pellisa</b> i <b>Oriol Baldà</b>. \n \n
+        \t L’app està protegida sota una llicència GPL (GNU), que permet la còpia, distribució i modificació del codi, sempre que es continuï
+        distribuint amb la mateixa llicència GPL i es faci esment dels seus autors originals.</string>
+
+    <string name="title_mlcultural">ML Cultural</string>
+    <string name="text_mlcultural">La Magic Line t\'ofereix propostes culturals.</string>
+    <string name="concert_SJD">Concert Solidari</string>
+    <string name="arts_carrer">Arts al carrer</string>
+    <string name="museus">Museus gratuïts</string>
+
     <string name="title_activity_map">Map</string>
     <string name="title_activity_facebook">Facebook</string>
     <string name="title_activity_sobrelapp">Sobrelapp</string>
-    <string name="title_activity_montjuic">Montjuic</string>
-    <string name="title_activity_espai">Espai</string>
-    <string name="title_activity_estadi">Estadi</string>
-    <string name="title_activity_festa">Festa</string>
     <string name="title_activity_emergencia">Emergencia</string>
     <string name="title_activity_sant_joan_deu">SantJoanDeu</string>
     <string name="title_activity_soci">Soci</string>
-    <string name="title_activity_productes">Productes</string>
     <string name="title_activity_web">Web</string>
+    <string name="title_activity_mlcultural">MLCultural</string>
+    <string name="title_activity_concert">Concert</string>
+    <string name="title_activity_arts">Arts</string>
+    <string name="title_activity_museus">Museus</string>
 
     <string name="button1">MAPA I PUNTS D\'INTERÈS \</string>
     <string name="button2">ML CULTURAL \</string>
@@ -54,7 +56,7 @@
 
     <string name="check_permission_phone">Has de permetre permisos de trucada</string>
     <string name="check_permission_maps">Has de permetre permisos de localització</string>
-    <string name="check_permission_storage">Has de permetre permisos de emmagatzematge</string>
+    <string name="check_permission_storage">Has de permetre permisos d\'emmagatzematge</string>
 
     <string name="button_route_10km">10</string>
     <string name="button_route_15km">15</string>
@@ -67,5 +69,20 @@
     <string name="body_notification_default">Hi ha una notícia nova!</string>
     <string name="body_announcement_default">No hi ha descripció de la notícia.</string>
 
+    <string name="title_concert">Concert solidari</string>
+    <string name="lloc_hora_concert"><b>Diumenge 5 de març a partir de les 17h a la plaça de la Catedral de Barcelona.</b></string>
+    <string name="info_concert">\t <b>Gossos</b>, <b>Quimi Portet</b>, <b>Animal</b>, <b>Andreu Rifé</b>, <b>Motis &amp; Chamorro &amp; Motis Trio</b>
+        i <b>Clams</b>. \n\n \t En un concert presentat per <b>Joan Dausà</b> amb Manu Danso, Àngels Arnaus, Assumpció Malagarriga, Yoyo Marra, Carlos
+        Ariza, Omar Boltes, Fredy Garcia i la Baix Llobregat Music Line.\n\n </string>
+
+    <string name="title_arts">Arts al carrer</string>
+    <string name="info1_arts"><b>Diumenge 5 de març teatre, dansa, graffiti, pintura... durant la caminada.</b></string>
+    <string name="info2_arts">Estigueu atents! Trobareu propostes d’arts escèniques i plàstiques, interpretades per artistes voluntaris implicats en
+        la inclusió social.</string>
+
+    <string name="title_museus">Museus gratuïts</string>
+    <string name="info1_museus"><b>Diumenge 5 de març i durant tot el mes de març.</b></string>
+    <string name="info2_museus">Accés gratuït ensenyant el passaturons a Caixa Fòrum, Poble Espanyol, MNAC, Fundació Joan Miró, Museu Olímpic i de
+        l\'Esport, Museu de les Ciències Naturals</string>
 
 </resources>
