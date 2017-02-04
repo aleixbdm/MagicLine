@@ -23,10 +23,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.obrasocialsjd.magicline.Announcements.AnnouncementActivity;
+import com.obrasocialsjd.magicline.Announcements.DatabaseAnnouncements;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -384,19 +386,33 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAnimationRepeat(Animation animation) {}
         });
-    }*/
+    }
 
     public void ButtonAnnouncements(){
+        final Animation announcementsAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
         announcements = (ImageButton) findViewById(R.id.announcements);
         announcements.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AnnouncementActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {view.startAnimation(announcementsAnimation);}
+        });
+        announcementsAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                DatabaseAnnouncements databaseAnnouncements = new DatabaseAnnouncements(getApplicationContext());
+                if (databaseAnnouncements.getCountAnnouncements() == 0) {
+                    Toast.makeText(getApplicationContext(),R.string.notificacions, Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Intent intent = new Intent(MainActivity.this, AnnouncementActivity.class);
+                    startActivity(intent);
+                }
             }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
         });
     }
-
 
     private void SubscribeToAnnouncements(){
         FirebaseMessaging.getInstance().subscribeToTopic("announcements");

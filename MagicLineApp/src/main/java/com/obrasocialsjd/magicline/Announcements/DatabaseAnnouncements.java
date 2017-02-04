@@ -164,4 +164,13 @@ public class DatabaseAnnouncements extends SQLiteOpenHelper {
         return true;
     }
 
+    public int getCountAnnouncements() {
+        String countQuery = "SELECT  * FROM " + TABLE_ANNOUNCEMENTSDOWNLOADED;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int size = cursor.getCount();
+        cursor.close();
+        return size;
+    }
+
 }
