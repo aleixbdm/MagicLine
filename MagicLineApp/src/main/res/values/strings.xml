@@ -63,6 +63,9 @@
     <string name="button_route_40km">40</string>
 
     <string name="title_notification_default">Magic Line</string>
+    <string name="title_announcement_default">Notícia Magic Line</string>
+    <string name="body_notification_default">Hi ha una notícia nova!</string>
+    <string name="body_announcement_default">No hi ha descripció de la notícia.</string>
 
 
 </resources>

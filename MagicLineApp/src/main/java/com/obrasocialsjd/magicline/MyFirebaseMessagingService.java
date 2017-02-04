@@ -54,18 +54,20 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
             for (String key : remoteMessage.getData().keySet()){
-                if (key.equals("Title")) title = remoteMessage.getData().get(key);
-                if (key.equals("Body")) body = remoteMessage.getData().get(key);
+                if (key.equals("title")) title = remoteMessage.getData().get(key);
+                if (key.equals("body")) body = remoteMessage.getData().get(key);
             }
+            sendNotification(title, body);
             Log.i(TAG, "Message data payload: " + remoteMessage.getData());
         }
 
         // Check if message contains a notification payload.
-        if (remoteMessage.getNotification() != null) {
+        // Removed because works another way than the messages
+        /*if (remoteMessage.getNotification() != null) {
             Log.i(TAG, "Message Notification Title: " + remoteMessage.getNotification().getTitle());
             Log.i(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
             sendNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
-        }
+        }*/
 
         // Also if you intend on generating your own notifications as a result of a received FCM
         // message, here is where that should be initiated. See sendNotification method below.
@@ -73,8 +75,14 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         //Register the message on the database
         if (getApplicationContext() != null) {
             DatabaseAnnouncements databaseAnnouncements = new DatabaseAnnouncements(getApplicationContext());
+
+            String titleAnnouncement = (!title.equals("")) ? title : getResources().getString(R.string.title_announcement_default);
+            String messageBodyAnnouncement = (!body.equals("")) ? body : getResources().getString(R.string.body_announcement_default);
+
+
             databaseAnnouncements.addAnnouncement(
-                    new AnnouncementDB(-1, title, body, dateString), DatabaseAnnouncements.TABLE_ANNOUNCEMENTSDOWNLOADED
+                    new AnnouncementDB(-1, titleAnnouncement, messageBodyAnnouncement, dateString),
+                    DatabaseAnnouncements.TABLE_ANNOUNCEMENTSDOWNLOADED
             );
 
             //Check the addition (optional)
@@ -99,13 +107,14 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);
 
-        String titleNotification = (title != null) ? title : getResources().getString(R.string.title_notification_default);
+        String titleNotification = (!title.equals("")) ? title : getResources().getString(R.string.title_notification_default);
+        String messageBodyNotification = (!messageBody.equals("")) ? messageBody : getResources().getString(R.string.body_notification_default);
 
         Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.ic_directions_walk_black_24dp)
                 .setContentTitle(titleNotification)
-                .setContentText(messageBody)
+                .setContentText(messageBodyNotification)
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
                 .setContentIntent(pendingIntent);
