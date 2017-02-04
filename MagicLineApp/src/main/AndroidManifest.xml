@@ -46,10 +46,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".InfoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -150,54 +146,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Montjuic"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/title_activity_montjuic"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="com.obrasocialsjd.magicline.Montjuic" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Espai"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/title_activity_espai"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="com.obrasocialsjd.magicline.Espai" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Estadi"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/title_activity_estadi"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="com.obrasocialsjd.magicline.Estadi" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Festa"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/title_activity_festa"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="com.obrasocialsjd.magicline.Festa" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".Emergencia"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_emergencia"
@@ -227,6 +175,46 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="com.obrasocialsjd.magicline.Soci" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MLCultural"
+            android:label="@string/title_activity_mlcultural"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.obrasocialsjd.magicline.MLCultural" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Concert"
+            android:label="@string/title_activity_concert"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.obrasocialsjd.magicline.Concert" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ArtsAlCarrer"
+            android:label="@string/title_activity_arts"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.obrasocialsjd.magicline.ArtsAlCarrer" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Museus"
+            android:label="@string/title_activity_museus"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.obrasocialsjd.magicline.Museus" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

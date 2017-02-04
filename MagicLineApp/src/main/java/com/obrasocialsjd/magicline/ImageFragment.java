@@ -1,5 +1,7 @@
 package com.obrasocialsjd.magicline;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,20 +19,16 @@ import android.widget.TextView;
 public class ImageFragment extends Fragment {
 
     private static ImageView imageView;
-    private int image;
+    private int imageIdentifier;
 
     public ImageFragment() {}
 
-    public static ImageFragment newInstance(int image) {
+    public static ImageFragment newInstance(int imageIdentifier) {
         Bundle args = new Bundle();
-        args.putInt("image", image);
+        args.putInt("imageIdentifier", imageIdentifier);
         ImageFragment fragment = new ImageFragment();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
     }
 
     @Override
@@ -45,10 +43,9 @@ public class ImageFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.image_layout, container, false);
 
         Bundle args = getArguments();
-        image = args.getInt("image");
+        imageIdentifier = args.getInt("imageIdentifier");
         imageView = (ImageView) rootView.findViewById(R.id.image);
-        imageView.setImageResource(image);
-
+        imageView.setImageResource(imageIdentifier);
         return rootView;
     }
 }

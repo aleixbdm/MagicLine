@@ -15,7 +15,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="30dp"
         android:orientation="horizontal"
         android:id="@+id/linearlayout1"
         android:layout_marginBottom="@dimen/elements_vertical_margin">
@@ -79,14 +79,23 @@
 
     </LinearLayout>
 
-    <android.support.v4.view.ViewPager
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/viewpager"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.55"
+        android:layout_weight="0.70"
+        android:orientation="vertical"
+        android:background="@drawable/noticies_style"
         android:layout_marginBottom="@dimen/elements_vertical_margin">
-    </android.support.v4.view.ViewPager>
+
+        <android.support.v4.view.ViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_noticies">
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -99,7 +108,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.45"
+        android:layout_weight="0.30"
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:id="@+id/linearlayout2"
@@ -130,10 +139,8 @@
                     android:textSize="@dimen/size_text_buttons"
                     android:text="@string/button1"
                     android:drawableLeft="@mipmap/ic_place_white_48dp"
-                    android:paddingBottom="@dimen/padding_buttons"
-                    android:paddingLeft="@dimen/padding_buttons"
-                    android:paddingRight="@dimen/padding_buttons"
-                    android:paddingTop="@dimen/padding_buttons"
+
+                    android:padding="@dimen/padding_buttons"
                     android:background="@null"/>
 
             </FrameLayout>
@@ -152,10 +159,7 @@
                     android:textSize="@dimen/size_text_buttons"
                     android:text="@string/button2"
                     android:drawableLeft="@mipmap/ic_palette_white_48dp"
-                    android:paddingBottom="@dimen/padding_buttons"
-                    android:paddingLeft="@dimen/padding_buttons"
-                    android:paddingRight="@dimen/padding_buttons"
-                    android:paddingTop="@dimen/padding_buttons"
+                    android:padding="@dimen/padding_buttons"
                     android:background="@null"/>
 
             </FrameLayout>
@@ -177,7 +181,8 @@
                 android:layout_weight="0.5"
                 android:background="@drawable/button_style"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="@dimen/elements_vertical_margin2">
+                android:layout_marginBottom="@dimen/elements_vertical_margin2"
+                android:padding="@dimen/padding_buttons">
 
                 <Button
                     android:layout_width="match_parent"
@@ -186,10 +191,6 @@
                     android:textSize="@dimen/size_text_buttons"
                     android:text="@string/button3"
                     android:drawableLeft="@mipmap/ic_tag_faces_white_48dp"
-                    android:paddingBottom="@dimen/padding_buttons"
-                    android:paddingLeft="@dimen/padding_buttons"
-                    android:paddingRight="@dimen/padding_buttons"
-                    android:paddingTop="@dimen/padding_buttons"
                     android:background="@null" />
 
             </FrameLayout>
@@ -208,10 +209,7 @@
                     android:textSize="@dimen/size_text_buttons"
                     android:text="@string/button4"
                     android:drawableLeft="@mipmap/ic_call_white_48dp"
-                    android:paddingBottom="@dimen/padding_buttons"
-                    android:paddingLeft="@dimen/padding_buttons"
-                    android:paddingRight="@dimen/padding_buttons"
-                    android:paddingTop="@dimen/padding_buttons"
+                    android:padding="@dimen/padding_buttons"
                     android:background="@null"/>
 
             </FrameLayout>
@@ -225,17 +223,31 @@
         android:layout_height="25dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/SantJoandeDeu"
             android:textColor="#FFFFFF"
             android:textStyle="bold|italic"
             android:textSize="20dp"
-            android:id="@+id/textView_SantJoandeDeu"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:id="@+id/button5"
+            android:background="@null"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/SobreApp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold|italic"
+            android:textSize="20dp"
+            android:id="@+id/button6"
+            android:background="@null"/>
 
     </LinearLayout>
 

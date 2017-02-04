@@ -1,7 +1,6 @@
 package com.obrasocialsjd.magicline;
 
 import android.Manifest;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,6 +17,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
@@ -33,9 +34,12 @@ public class MainActivity extends AppCompatActivity {
     private static Activity activity;
     private static final String TAG = "DemoButtonApp";
     private Button btnRuta;
-    private Button btnInfo;
+    private Button btnSOS;
+    private Button btnMLC;
+    private Button btnGim;
+    private Button btnSJD;
+    private Button btnApp;
 
-    private static Button button;
     private static ImageButton facebookbutton;
     private static ImageButton twitterbutton;
     private static ImageButton youtubebutton;
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageFragment[] images;
     private static int num_images;
     private static RadioGroup radioGroup;
+    private static final int tempsScroll = 5000;
 
     private static int MY_PERMISSION_CALL_PHONE_REQUEST;
     private static int MY_PERMISSIONS_LOCATION_REQUEST;
@@ -58,20 +63,19 @@ public class MainActivity extends AppCompatActivity {
 
         activity = this;
 
-        btnRuta= (Button) this.findViewById(R.id.button1);
-        //btnInfo=(Button)this.findViewById(R.id.buttonInfo);
-        //ButtontoInfo();
+        num_images = 9;
+
         ButtonToMap();
-        ButtonTrucadaEmergencia();
-        num_images = 4;
+        ButtonToTrucadaEmergencia();
+        ButtonToMLCultural();
+        ButtonToGimcana();
         ImageButtontofacebook();
         ImageButtontotwitter();
         ImageButtontoyoutube();
         CreationImagesViewPager();
         IniciarViewPager();
-        /*Buttontosobrelapp();
-        ButtonSantJoanDeu();*/
-        //ButtonCalculs();
+        ButtonToSobreApp();
+        ButtonToSantJoanDeu();
 
         CheckPermissions();
 
@@ -108,36 +112,86 @@ public class MainActivity extends AppCompatActivity {
 
     private void CreationImagesViewPager() {
         images = new ImageFragment[num_images];
-        int[] id_images = new int[4];
-        id_images[0] = R.drawable.descobrir_montjuic;
-        id_images[1] = R.drawable.espai_dels_somnis;
-        id_images[2] = R.drawable.festa_magic_line;
-        id_images[3] = R.drawable.estadi_olimpic;
         for (int i = 0; i < num_images; i++) {
-            images[i] = ImageFragment.newInstance(id_images[i]);
-            Log.d("INFORMACIO","CREATIONIMAGESVIEWPAGER" + String.valueOf(i));
+            String imageName = "noticia" + String.valueOf(i+1) + "300x300";
+            int imageIdentifier = getResources().getIdentifier(imageName, "drawable", getPackageName());
+            images[i] = ImageFragment.newInstance(imageIdentifier);
         }
     }
 
-
     private void ButtonToMap() {
+        final Animation mapAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        btnRuta= (Button) this.findViewById(R.id.button1);
         btnRuta.setOnClickListener(new View.OnClickListener() {
-
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {view.startAnimation(mapAnimation);}
+        });
+        mapAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
                 Intent intent = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent);
             }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
         });
     }
 
-    public void ButtonTrucadaEmergencia(){
-        button = (Button) findViewById(R.id.button4);
-        button.setOnClickListener(new View.OnClickListener() {
+    public void ButtonToMLCultural(){
+        final Animation culturalAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        btnMLC = (Button) findViewById(R.id.button2);
+        btnMLC.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.CustomAlertDialog);
+            public void onClick(View view) {view.startAnimation(culturalAnimation);}
+        });
+        culturalAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(MainActivity.this, MLCultural.class);
+                startActivity(intent);
+            }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
+    }
 
+    public void ButtonToGimcana(){
+        final Animation gimcanaAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        btnGim = (Button) findViewById(R.id.button3);
+        btnGim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {view.startAnimation(gimcanaAnimation);}
+        });
+        gimcanaAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                /*Intent intent = new Intent(MainActivity.this, Gimcana.class);
+                startActivity(intent);*/
+            }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
+    }
+
+    public void ButtonToTrucadaEmergencia(){
+        final Animation emergenciaAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        btnSOS = (Button) findViewById(R.id.button4);
+        btnSOS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {view.startAnimation(emergenciaAnimation);}
+        });
+        emergenciaAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                final AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.CustomAlertDialog);
                 builder.setMessage(R.string.pop_up_question);
                 builder.setPositiveButton(R.string.pop_up_answer2, new DialogInterface.OnClickListener() {
                     @Override
@@ -149,30 +203,24 @@ public class MainActivity extends AppCompatActivity {
                 builder.setNegativeButton(R.string.pop_up_answer1, null);
                 final AlertDialog alertDialog = builder.show();
                 alertDialog.setTitle(R.string.pop_up_title);
-                /*alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
-                    @Override
-                    public void onShow(DialogInterface dialogInterface) {
-                        alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextSize(20);
-                    }
-                });*/
             }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
         });
     }
 
-    private void ButtontoInfo() {
+    /*private void ButtontoInfo() {
 
         btnInfo.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                //Toast.makeText(MainActivity.this, "Què és La Magic Line?", Toast.LENGTH_LONG).show();
-                //Toast.makeText().show() pop ups a message on mobile screen
                 Intent intent =new Intent(MainActivity.this, InfoActivity.class);
                 startActivity(intent);
             }
         });
 
-    }
+    }*/
 
     private void IniciarViewPager() {
         final Handler handler = new Handler();
@@ -225,40 +273,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-        },5000,5000);
-    }
-
-    private void ImageButtontofacebook() {
-        facebookbutton = (ImageButton) findViewById(R.id.facebook);
-        facebookbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.obrasocialsjd.magicline.Facebook");
-                startActivity(intent);
-            }
-        });
-    }
-    private void ImageButtontotwitter(){
-        twitterbutton = (ImageButton) findViewById(R.id.twitter);
-        twitterbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.obrasocialsjd.magicline.Twitter");
-                startActivity(intent);
-            }
-        });
-    }
-
-
-    private void ImageButtontoyoutube(){
-        youtubebutton = (ImageButton) findViewById(R.id.youtube);
-        youtubebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.obrasocialsjd.magicline.Youtube");
-                startActivity(intent);
-            }
-        });
+        },tempsScroll,tempsScroll);
     }
 
     public class CustomPagerAdapter extends FragmentPagerAdapter {
@@ -278,29 +293,102 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*public void Buttontosobrelapp(){
-        button = (Button) findViewById(R.id.buttonsobrelapp);
-        button.setOnClickListener(new View.OnClickListener() {
+    private void ImageButtontofacebook() {
+        final Animation facebookAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        facebookbutton = (ImageButton) findViewById(R.id.facebook);
+        facebookbutton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.obrasocialsjd.magicline.Sobrelapp");
+            public void onClick(View view) {view.startAnimation(facebookAnimation);}
+        });
+        facebookAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(MainActivity.this, Facebook.class);
                 startActivity(intent);
             }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
+    }
+    private void ImageButtontotwitter(){
+        final Animation twitterAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        twitterbutton = (ImageButton) findViewById(R.id.twitter);
+        twitterbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {view.startAnimation(twitterAnimation);}
+        });
+        twitterAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(MainActivity.this, Twitter.class);
+                startActivity(intent);
+            }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
         });
     }
 
-    public void ButtonSantJoanDeu(){
-        button = (Button) findViewById(R.id.button2);
-        button.setOnClickListener(new View.OnClickListener() {
+
+    private void ImageButtontoyoutube(){
+        final Animation youtubeAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        youtubebutton = (ImageButton) findViewById(R.id.youtube);
+        youtubebutton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("com.obrasocialsjd.magicline.SantJoanDeu");
+            public void onClick(View view) {view.startAnimation(youtubeAnimation);}
+        });
+        youtubeAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(MainActivity.this, Youtube.class);
                 startActivity(intent);
             }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
         });
-    }*/
-
-    private void ButtonCalculs() {
     }
 
+    public void ButtonToSantJoanDeu(){
+        final Animation SJDAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        btnSJD = (Button) findViewById(R.id.button5);
+        btnSJD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {view.startAnimation(SJDAnimation);}
+        });
+        SJDAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(MainActivity.this, SantJoanDeu.class);
+                startActivity(intent);
+            }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
+    }
+    public void ButtonToSobreApp(){
+        final Animation sobreAppAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        btnApp = (Button) findViewById(R.id.button6);
+        btnApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {view.startAnimation(sobreAppAnimation);}
+        });
+        sobreAppAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(MainActivity.this, Sobrelapp.class);
+                startActivity(intent);
+            }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
+    }
 }
