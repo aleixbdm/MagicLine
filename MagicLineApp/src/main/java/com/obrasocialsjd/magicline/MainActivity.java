@@ -57,9 +57,8 @@ public class MainActivity extends AppCompatActivity {
     private static RadioGroup radioGroup;
     private static final int tempsScroll = 5000;
 
-    private static int MY_PERMISSION_CALL_PHONE_REQUEST;
-    private static int MY_PERMISSIONS_LOCATION_REQUEST;
-    private static int MY_PERMISSION_WRITE_EXTERNAL_STORAGE_REQUEST;
+    private static final int MY_PERMISSION_CALL_PHONE_REQUEST = 0x1;
+    private static final int MY_PERMISSIONS_LOCATION_REQUEST = 0x2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +86,42 @@ public class MainActivity extends AppCompatActivity {
         //GetTokenId();
 
         SubscribeToAnnouncements();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSION_CALL_PHONE_REQUEST: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.CustomAlertDialog);
+                    builder.setMessage(R.string.pop_up_question);
+                    builder.setPositiveButton(R.string.pop_up_answer2, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent intent = new Intent(MainActivity.this, Emergencia.class);
+                            startActivity(intent);
+                        }
+                    });
+                    builder.setNegativeButton(R.string.pop_up_answer1, null);
+                    final AlertDialog alertDialog = builder.show();
+                    alertDialog.setTitle(R.string.pop_up_title);
+                }
+                return;
+            }
+
+            case MY_PERMISSIONS_LOCATION_REQUEST: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Intent intent = new Intent(MainActivity.this, MapActivity.class);
+                    startActivity(intent);
+                }
+                return;
+            }
+        }
     }
 
     private void GetTokenId(){
