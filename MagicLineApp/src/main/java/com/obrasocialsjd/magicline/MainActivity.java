@@ -180,8 +180,8 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animation animation) {}
             @Override
             public void onAnimationEnd(Animation animation) {
-                /*Intent intent = new Intent(MainActivity.this, Gimcana.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(MainActivity.this, Gimcana.class);
+                startActivity(intent);
             }
             @Override
             public void onAnimationRepeat(Animation animation) {}

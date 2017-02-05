@@ -217,6 +217,46 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Gimcana"
+            android:label="@string/title_activity_gimcana"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.obrasocialsjd.magicline.Gimcana" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PremisICondicions"
+            android:label="@string/title_activity_premis_condicions"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.obrasocialsjd.magicline.PremisICondicions" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PetitExplorador"
+            android:label="@string/title_activity_petit_explorador"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.obrasocialsjd.magicline.PetitExplorador" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GranExplorador"
+            android:label="@string/title_activity_gran_explorador"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.obrasocialsjd.magicline.GranExplorador" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Announcements.AnnouncementActivity"></activity>
     </application>
 
