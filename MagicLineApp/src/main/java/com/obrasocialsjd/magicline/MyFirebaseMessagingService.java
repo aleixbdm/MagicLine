@@ -86,12 +86,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             );
 
             //Check the addition (optional)
-            for (AnnouncementDB announcementDB :
+            /*for (AnnouncementDB announcementDB :
                     databaseAnnouncements.getAllAnnouncement(DatabaseAnnouncements.TABLE_ANNOUNCEMENTSDOWNLOADED)){
                 Log.i("DatabaseDB","Announcement title: "+ announcementDB.get_title());
                 Log.i("DatabaseDB","Announcement text: "+ announcementDB.get_text());
                 Log.i("DatabaseDB","Announcement date: "+ announcementDB.get_time());
-            }
+            }*/
         }
     }
     // [END receive_message]

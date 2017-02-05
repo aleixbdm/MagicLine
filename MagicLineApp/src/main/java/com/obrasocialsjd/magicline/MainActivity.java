@@ -84,30 +84,9 @@ public class MainActivity extends AppCompatActivity {
 
         ButtonAnnouncements();
 
-        CheckPermissions();
-
-        GetTokenId();
+        //GetTokenId();
 
         SubscribeToAnnouncements();
-    }
-
-    private void CheckPermissions(){
-        int permissionCheck = ContextCompat.checkSelfPermission(activity, Manifest.permission.CALL_PHONE);
-        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(activity, new String[]
-                    {Manifest.permission.CALL_PHONE}, MY_PERMISSION_CALL_PHONE_REQUEST);
-        }
-        permissionCheck = ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION);
-        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]
-                    {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
-                    MY_PERMISSIONS_LOCATION_REQUEST);
-        }
-        permissionCheck = ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(activity, new String[]
-                    {Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSION_WRITE_EXTERNAL_STORAGE_REQUEST);
-        }
     }
 
     private void GetTokenId(){
@@ -140,8 +119,18 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animation animation) {}
             @Override
             public void onAnimationEnd(Animation animation) {
-                Intent intent = new Intent(MainActivity.this, MapActivity.class);
-                startActivity(intent);
+
+                //Check permission
+                int permissionCheck = ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION);
+                if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(activity, new String[]
+                                    {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
+                            MY_PERMISSIONS_LOCATION_REQUEST);
+                }
+                else {
+                    Intent intent = new Intent(MainActivity.this, MapActivity.class);
+                    startActivity(intent);
+                }
             }
             @Override
             public void onAnimationRepeat(Animation animation) {}
@@ -200,18 +189,27 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animation animation) {}
             @Override
             public void onAnimationEnd(Animation animation) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.CustomAlertDialog);
-                builder.setMessage(R.string.pop_up_question);
-                builder.setPositiveButton(R.string.pop_up_answer2, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent = new Intent(MainActivity.this, Emergencia.class);
-                        startActivity(intent);
-                    }
-                });
-                builder.setNegativeButton(R.string.pop_up_answer1, null);
-                final AlertDialog alertDialog = builder.show();
-                alertDialog.setTitle(R.string.pop_up_title);
+
+                //Check permission
+                int permissionCheck = ContextCompat.checkSelfPermission(activity, Manifest.permission.CALL_PHONE);
+                if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(activity, new String[]
+                            {Manifest.permission.CALL_PHONE}, MY_PERMISSION_CALL_PHONE_REQUEST);
+                }
+                else {
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.CustomAlertDialog);
+                    builder.setMessage(R.string.pop_up_question);
+                    builder.setPositiveButton(R.string.pop_up_answer2, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent intent = new Intent(MainActivity.this, Emergencia.class);
+                            startActivity(intent);
+                        }
+                    });
+                    builder.setNegativeButton(R.string.pop_up_answer1, null);
+                    final AlertDialog alertDialog = builder.show();
+                    alertDialog.setTitle(R.string.pop_up_title);
+                }
             }
             @Override
             public void onAnimationRepeat(Animation animation) {}
@@ -402,7 +400,7 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 DatabaseAnnouncements databaseAnnouncements = new DatabaseAnnouncements(getApplicationContext());
                 if (databaseAnnouncements.getCountAnnouncements() == 0) {
-                    Toast.makeText(getApplicationContext(),R.string.notificacions, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),R.string.no_notificacions, Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Intent intent = new Intent(MainActivity.this, AnnouncementActivity.class);
@@ -416,7 +414,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void SubscribeToAnnouncements(){
         FirebaseMessaging.getInstance().subscribeToTopic("announcements");
-        Log.i("FirebaseTopics","Subscribed");
+        //Log.i("FirebaseTopics","Subscribed");
     }
 
 }

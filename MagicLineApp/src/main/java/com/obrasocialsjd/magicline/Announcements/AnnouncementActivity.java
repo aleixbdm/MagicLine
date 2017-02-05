@@ -10,6 +10,8 @@ import android.widget.Toast;
 import com.obrasocialsjd.magicline.R;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
 public class AnnouncementActivity extends Activity {
         ListView list;
@@ -44,6 +46,9 @@ public class AnnouncementActivity extends Activity {
 
             if (getApplicationContext() != null) {
                 DatabaseAnnouncements databaseAnnouncements = new DatabaseAnnouncements(getApplicationContext());
+
+                //Iterate from start to end
+                /*
                 for (AnnouncementDB announcementDB :
                         databaseAnnouncements.getAllAnnouncement(DatabaseAnnouncements.TABLE_ANNOUNCEMENTSDOWNLOADED)){
                     final ListModel sched = new ListModel();
@@ -52,7 +57,24 @@ public class AnnouncementActivity extends Activity {
                     sched.setText(announcementDB.get_text());
                     sched.setTime(announcementDB.get_time());
 
-                    /******** Take Model Object in ArrayList **********/
+                    CustomListViewValuesArr.add( sched );
+                }*/
+
+                //Iterate from end to start (to show last announcements first)
+                List<AnnouncementDB> arrayList = databaseAnnouncements.
+                        getAllAnnouncement(DatabaseAnnouncements.TABLE_ANNOUNCEMENTSDOWNLOADED);
+                // Generate an iterator. Start just after the last element.
+                ListIterator li = arrayList.listIterator(arrayList.size());
+
+                // Iterate in reverse.
+                while(li.hasPrevious()) {
+                    AnnouncementDB announcementDB = (AnnouncementDB) li.previous();
+                    final ListModel sched = new ListModel();
+
+                    sched.setTitle(announcementDB.get_title());
+                    sched.setText(announcementDB.get_text());
+                    sched.setTime(announcementDB.get_time());
+
                     CustomListViewValuesArr.add( sched );
                 }
             }

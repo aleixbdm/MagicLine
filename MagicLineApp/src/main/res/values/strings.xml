@@ -126,6 +126,6 @@
     <string name="info2_museus">Accés gratuït ensenyant el passaturons a Caixa Fòrum, Poble Espanyol, MNAC, Fundació Joan Miró, Museu Olímpic i de
         l\'Esport, Museu de les Ciències Naturals</string>
 
-    <string name="notificacions">No tens cap notificació</string>
+    <string name="no_notificacions">No tens cap notificació</string>
 
 </resources>
