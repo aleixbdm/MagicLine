@@ -19,7 +19,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".SantJoanDeu"
     android:orientation="vertical"
-    android:background="@color/magicRed">
+    android:background="@color/white">
 
     <TextView
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
         android:paddingLeft="5dp"
         android:lines="1"
         android:maxLines="1"
-        android:textColor="@color/white"
+        android:textColor="@color/magicRed"
         android:textSize="25dp"
         android:textStyle="bold"/>
 
@@ -37,7 +37,7 @@
         android:layout_marginTop="2dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/white"/>
+        android:background="@color/magicRed"/>
 
     <TextView
         android:layout_width="match_parent"

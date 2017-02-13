@@ -18,12 +18,12 @@
     <string name="pagina_web">solidaritat.santjoandedeu.org</string>
 
     <string name="SobreApp">Sobre l\'App</string>
-    <string name="sobreapp">\t Aquesta aplicació és el resultat del <b>treball voluntari</b> de quatre estudiants de la Universitat Politècnica de
+    <string name="sobreapp">Aquesta aplicació és el resultat del <b>treball voluntari</b> de quatre estudiants de la Universitat Politècnica de
         Catalunya (UPC) i participants del programa de voluntariat impulsat per un conveni de col·laboració entre la <b>UPC</b> i <b>l’Obra
         Social Sant Joan de Déu</b>. \n \n
-        \t La primera versió que es va posar en marxa va ser creada per <b>Mariona Carós</b> i <b>Joan Febrer</b> i es va utilitzar en la caminada
+        La primera versió que es va posar en marxa va ser creada per <b>Mariona Carós</b> i <b>Joan Febrer</b> i es va utilitzar en la caminada
         solidària del 28 de Febrer de 2016. La segona i actual versió ha estat dissenyada per <b>Aleix Pellisa</b> i <b>Oriol Baldà</b>. \n \n
-        \t L’app està protegida sota una llicència GPL (GNU), que permet la còpia, distribució i modificació del codi, sempre que es continuï
+        L’app està protegida sota una llicència GPL (GNU), que permet la còpia, distribució i modificació del codi, sempre que es continuï
         distribuint amb la mateixa llicència GPL i es faci esment dels seus autors originals.</string>
 
     <string name="title_mlcultural">ML Cultural</string>
@@ -33,22 +33,22 @@
     <string name="museus">Museus gratuïts</string>
 
     <string name="title_gimcana">Gimcana</string>
-    <string name="intro_gimcana">\t Ets part de la Magic Line? Vols sentir-la, gaudir-la i compartir-la amb els altres per fer més gran l\'onada solidària? \n
-        \t Petit Explorador, Gran Explorador i Sant Joan de Déu s\'uneixen per proposar-vos petits reptes durant la caminada, per tal d\'implicar més i més gent
+    <string name="intro_gimcana">Ets part de la Magic Line? Vols sentir-la, gaudir-la i compartir-la amb els altres per fer més gran l\'onada solidària? \n
+        Petit Explorador, Gran Explorador i Sant Joan de Déu s\'uneixen per proposar-vos petits reptes durant la caminada, per tal d\'implicar més i més gent
         en aquesta mobilització solidària.</string>
-    <string name="intro2_gimcana">\t Aconseguiràs fer una foto de cada prova? \n
-        \t Tens l’oportunitat de guanyar molts premis! \n
-        <b>\t Bon viatge!</b></string>
-    <string name="proves1_gimcana">\t Comparteix una foto o vídeo a <b>INSTAGRAM</b> o <b>FACEBOOK</b> de les següents accions amb l\'etiqueta <b>#ExploraML</b>
+    <string name="intro2_gimcana">Aconseguiràs fer una foto de cada prova? \n
+        Tens l’oportunitat de guanyar molts premis! \n
+        <b>Bon viatge!</b></string>
+    <string name="proves1_gimcana">Comparteix una foto o vídeo a <b>INSTAGRAM</b> o <b>FACEBOOK</b> de les següents accions amb l\'etiqueta <b>#ExploraML</b>
         i <b>#MagicLine2017</b>:</string>
     <string name="proves2_gimcana"><b>-</b> Parla amb un altre equip de la Magic Line \n
         <b>-</b> Dóna les gràcies a un voluntari \n
         <b>-</b> Comparteix un lloc de la ciutat que no coneguessis \n
         <b>-</b> Suma algú a fer uns metres de caminada amb tu \n
         <b>-</b> Amb quin contingut del laberint et reconeixes?</string>
-    <string name="proves3_gimcana">\t Cada foto o vídeo que pugis amb les dues etiquetes entra a sorteig!</string>
+    <string name="proves3_gimcana">Cada foto o vídeo que pugis amb les dues etiquetes entra a sorteig!</string>
     <string name="premis_condicions">Premis i condicions</string>
-    <string name="colaboracio">\t En col·laboració amb:</string>
+    <string name="colaboracio">En col·laboració amb:</string>
 
     <string name="info_premis">Pugeu les fotos a les xarxes socials amb els hashtags <b>#ExploraML</b> i <b>#MagicLine2017</b> i
         entrareu al sorteig de:</string>
@@ -112,8 +112,8 @@
 
     <string name="title_concert">Concert solidari</string>
     <string name="lloc_hora_concert"><b>Diumenge 5 de març a partir de les 17h a la plaça de la Catedral de Barcelona.</b></string>
-    <string name="info_concert">\t <b>Gossos</b>, <b>Quimi Portet</b>, <b>Animal</b>, <b>Andreu Rifé</b>, <b>Motis &amp; Chamorro &amp; Motis Trio</b>
-        i <b>Clams</b>. \n\n \t En un concert presentat per <b>Joan Dausà</b> amb Manu Danso, Àngels Arnaus, Assumpció Malagarriga, Yoyo Marra, Carlos
+    <string name="info_concert"><b>Gossos</b>, <b>Quimi Portet</b>, <b>Animal</b>, <b>Andreu Rifé</b>, <b>Motis &amp; Chamorro &amp; Motis Trio</b>
+        i <b>Clams</b>. \n\n En un concert presentat per <b>Joan Dausà</b> amb Manu Danso, Àngels Arnaus, Assumpció Malagarriga, Yoyo Marra, Carlos
         Ariza, Omar Boltes, Fredy Garcia i la Baix Llobregat Music Line.\n\n </string>
 
     <string name="title_arts">Arts al carrer</string>
