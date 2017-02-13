@@ -56,6 +56,19 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@string/reptes"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:id="@+id/reptes"
+                android:layout_centerVertical="true"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:padding="10dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/intro2_gimcana"
                 android:layout_marginTop="10dp"
                 android:textColor="#000000"
@@ -90,18 +103,6 @@
                 android:padding="10dp"
                 android:layout_marginLeft="20dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/proves3_gimcana"
-                android:layout_marginTop="10dp"
-                android:textColor="#000000"
-                android:id="@+id/proves3_gimcana"
-                android:layout_centerVertical="true"
-                android:textStyle="normal"
-                android:textSize="18dp"
-                android:padding="10dp"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/button_size"
@@ -114,8 +115,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/premis_condicions"
-                    android:background="@drawable/button_style"
+                    android:background="@drawable/button_style_2"
                     android:textSize="15dp"
+                    android:textColor="@color/magicRed"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold|italic"
                     android:text="@string/premis_condicions"
@@ -127,35 +129,34 @@
 
             </LinearLayout>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/colaboracio"
-                android:layout_marginTop="10dp"
-                android:textColor="#000000"
-                android:id="@+id/colaboracio"
-                android:layout_centerVertical="true"
-                android:textStyle="normal"
-                android:textSize="18dp"
-                android:padding="10dp"/>
+                android:orientation="vertical">
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button_petit_exp"
-                android:background="@null"
-                android:src="@drawable/petit_explorador"
-                android:adjustViewBounds="false"
-                android:scaleType="fitCenter"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_petit_exp"
+                    android:background="@null"
+                    android:src="@drawable/petit_explorador"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"/>
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button_gran_exp"
-                android:background="@null"
-                android:src="@drawable/gran_explorador"
-                android:adjustViewBounds="false"
-                android:scaleType="fitCenter"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_gran_exp"
+                    android:background="@null"
+                    android:src="@drawable/gran_explorador"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 

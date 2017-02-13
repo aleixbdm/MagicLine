@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         activity = this;
 
-        num_images = 9;
+        num_images = 6;
 
         ButtonToMap();
         ButtonToTrucadaEmergencia();
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
     private void CreationImagesViewPager() {
         images = new ImageFragment[num_images];
         for (int i = 0; i < num_images; i++) {
-            String imageName = "noticia" + String.valueOf(i+1) + "300x300";
+            String imageName = "noticia" + String.valueOf(i+1);
             int imageIdentifier = getResources().getIdentifier(imageName, "drawable", getPackageName());
             images[i] = ImageFragment.newInstance(imageIdentifier);
         }

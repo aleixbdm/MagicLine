@@ -81,7 +81,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.70"
         android:orientation="vertical"
-        android:background="@drawable/noticies_style"
+        android:background="@null"
         android:layout_marginBottom="@dimen/elements_vertical_margin">
 
         <android.support.v4.view.ViewPager
@@ -89,6 +89,7 @@
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/magicRed"
             android:padding="@dimen/padding_noticies">
         </android.support.v4.view.ViewPager>
 
@@ -187,6 +188,7 @@
                     android:id="@+id/button3"
                     android:textSize="@dimen/size_text_buttons"
                     android:text="@string/button3"
+                    android:textAllCaps="false"
                     android:drawableLeft="@mipmap/ic_tag_faces_white_48dp"
                     android:background="@null" />
 

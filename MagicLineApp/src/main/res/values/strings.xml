@@ -9,11 +9,10 @@
     cada pas i deixeu contagiar-vos per l’esperit de la Magic Line.\nPerò recordeu: <b>amb somiar no en tenim prou!</b></string>
 
     <string name="titol_SantJoan">Obra Social Sant Joan de Déu</string>
-    <string name="text_SantJoan">La solidaritat forma part de l\'ànima de l\'Orde Hospitalari Sant Joan de Déu. Aquest compromís és el que ens
-        mou per construir un món més just i hospitalari amb tothom, especialment amb les persones més
-        desfavorides.\n \n L\'Obra Social Sant Joan de Déu destina els fons recaptats amb la Magic Line a programes
-        de suport a persones en situació vulnerable: <b>ajudes socials</b>, <b>pisos d\'inclusió</b>, <b>teràpies complementàries</b>,
-        <b>atenció a la infància hospitalitzada</b>, <b>cooperació internacional</b> i <b>recerca</b>. \n \n
+    <string name="text_SantJoan">A <b>Sant Joan de Déu</b> atenem persones que es troben en situació de vulnerabilitat. \n \n A Barcelona,
+        disposem d’11 centres des d’on fem projectes d’atenció, recerca i cooperació internacional per a persones en situació de
+        sense llar, dependència, trastorn mental, amb discpacitat intel·lectual i infants. \n \n
+        Gràcies a la solidaritat de persones com tu, donem a conèixer la seva situació i els oferim una assistència integral. \n \n
     </string>
     <string name="pagina_web">solidaritat.santjoandedeu.org</string>
 
@@ -32,23 +31,18 @@
     <string name="arts_carrer">Arts al carrer</string>
     <string name="museus">Museus gratuïts</string>
 
-    <string name="title_gimcana">Gimcana</string>
-    <string name="intro_gimcana">Ets part de la Magic Line? Vols sentir-la, gaudir-la i compartir-la amb els altres per fer més gran l\'onada solidària? \n
-        Petit Explorador, Gran Explorador i Sant Joan de Déu s\'uneixen per proposar-vos petits reptes durant la caminada, per tal d\'implicar més i més gent
-        en aquesta mobilització solidària.</string>
-    <string name="intro2_gimcana">Aconseguiràs fer una foto de cada prova? \n
-        Tens l’oportunitat de guanyar molts premis! \n
-        <b>Bon viatge!</b></string>
-    <string name="proves1_gimcana">Comparteix una foto o vídeo a <b>INSTAGRAM</b> o <b>FACEBOOK</b> de les següents accions amb l\'etiqueta <b>#ExploraML</b>
-        i <b>#MagicLine2017</b>:</string>
-    <string name="proves2_gimcana"><b>-</b> Parla amb un altre equip de la Magic Line \n
+    <string name="title_gimcana">Explora Magic Line</string>
+    <string name="intro_gimcana"><b>En col·laboració amb Petit Explorador i Gran Explorador</b></string>
+    <string name="reptes">REPTES AMB PREMI</string>
+    <string name="intro2_gimcana">Comparteix una foto o vídeo d\’aquests reptes a les xarxes socials amb
+        les etiquetes: <b>#ExploraML</b> i <b>#MagicLine2017</b></string>
+    <string name="proves1_gimcana"><b>-</b> Parla amb un altre equip de la Magic Line \n
         <b>-</b> Dóna les gràcies a un voluntari \n
         <b>-</b> Comparteix un lloc de la ciutat que no coneguessis \n
         <b>-</b> Suma algú a fer uns metres de caminada amb tu \n
         <b>-</b> Amb quin contingut del laberint et reconeixes?</string>
-    <string name="proves3_gimcana">Cada foto o vídeo que pugis amb les dues etiquetes entra a sorteig!</string>
+    <string name="proves2_gimcana">Cada foto o vídeo que pugis amb les dues etiquetes entra a sorteig.</string>
     <string name="premis_condicions">Premis i condicions</string>
-    <string name="colaboracio">En col·laboració amb:</string>
 
     <string name="info_premis">Pugeu les fotos a les xarxes socials amb els hashtags <b>#ExploraML</b> i <b>#MagicLine2017</b> i
         entrareu al sorteig de:</string>
@@ -61,7 +55,7 @@
         <b>-</b> 1 calendari Gran Explorador de paret del 2017. \n</string>
     <string name="title_condicions">Condicions del sorteig:</string>
     <string name="list_condicions"><b>-</b> Podeu participar durant tot el dia de la Magic Line Sant Joan de Déu - 5 de Març 2017. \n\n
-        <b>-</b> El sorteig es farà el dijous 9 de març, amb el número de la <b>ONZE</b>. Els guanyadors seran els que coincideixin amb el
+        <b>-</b> El sorteig es farà el dijous 9 de març, amb el número de la <b>ONCE</b>. Els guanyadors seran els que coincideixin amb el
         número guanyador i els consecutius. \n\n
         <b>-</b> Per participar puja una foto / vídeo a les xarxes xocials amb el hashtag <b>#ExploraML</b> i <b>#MagicLine2017</b>. \n\n
         <b>-</b> S\'anunciaran els noms dels guanyadors a través de les xarxes socials. Si el guanyador no ha contactat amb <b>Petit Explorador</b>
@@ -87,7 +81,7 @@
 
     <string name="button1">MAPA I PUNTS D\'INTERÈS \</string>
     <string name="button2">ML CULTURAL \</string>
-    <string name="button3">GIMCANA \</string>
+    <string name="button3">#ExploraML \</string>
     <string name="button4">EMERGÈNCIES \</string>
 
     <string name="pop_up_title">TRUCADA D\'EMERGÈNCIES</string>
