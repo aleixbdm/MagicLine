@@ -184,9 +184,13 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
 
         Toast.makeText(MapActivity.this, "Clica la icona per obtenir informació", Toast.LENGTH_LONG).show();
 
-        setMarker("Festa Magic Line", "Photocall 11-18:30 h. Concert: 17-18 h.", 41.38477, 2.17574, R.drawable.festa);
-        setMarker("Arribada Pl. de la Catedral", "Tancament a les 18:30 h", 41.3844, 2.1752, R.drawable.sortida); //Pl de la Catedral,
-        setMarker("Tram adaptat sense escales", " ", 41.3708, 2.169, R.drawable.adapt);
+        setMarker("Concert solidari", "Música per la inclusió 17-18:30h.", 41.384649, 2.175834, R.drawable.festa);
+        setMarker("PicNic", "Tancament 17:45h.", 41.361957, 2.162834, R.drawable.festa);
+        setMarker("Arribada Pl. de la Catedral", "Tancament a les 19 h", 41.384161, 2.175301, R.drawable.sortida);
+
+        //setMarker("Tram adaptat sense escales", " ", 41.3708, 2.169, R.drawable.adapt);
+
+        /* Tothom es morirà de sed...?
 
         setMarker("Font", "", 41.41649, 2.15293, R.drawable.fonts);
         setMarker("Font", "", 41.42317, 2.12254, R.drawable.fonts);
@@ -208,28 +212,41 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
         setMarker("Font", "", 41.38462, 2.12367, R.drawable.fonts);
         setMarker("Font", "", 41.38219, 2.12768, R.drawable.fonts);
         setMarker("Font", "", 41.37281, 2.15025, R.drawable.fonts);
+        */
 
-        setMarker("Fes-te una foto!", "Us hi espera una sorpresa! Tancament 16.30 h", 41.36487, 2.15557, R.drawable.cam);
+        setMarker("Font d'en Fargues", "Hora tancament: 10:30h", 41.421444, 2.164811,
+                R.drawable.fonts);
 
-        setMarker("Control Castell de Montjuïc", "Tancament: 17.15 h", 41.3607, 2.16243, R.drawable.control);
-        setMarker("Control Mont Tàber", "Tancament: 18.20 h", 41.38343, 2.17714, R.drawable.control);
-        setMarker("Control Sant Pere Màrtir", "Tancament: 14.05 h", 41.3938, 2.09778, R.drawable.control);
-        setMarker("Control Tibidabo", "Tancament: 13.05 h", 41.4218, 2.1187, R.drawable.control);
-        setMarker("Control Turó Creueta del Coll", "Tancament: 11.30 h", 41.41979, 2.14688, R.drawable.control);
-        setMarker("Control Turó del Carmel", "Tancament: 11.15 h", 41.41856, 2.15435, R.drawable.control);
-        setMarker("Control Turó de la Peira", "Tancament: 10.00 h", 41.43287, 2.16559, R.drawable.control);
-        setMarker("Control Torre Baró", "Tancament: 08.30 h", 41.4514, 2.1764, R.drawable.control);
-        setMarker("Control Turó de La Rovira", "Tancament: 11.00 h", 41.41927, 2.16177, R.drawable.control);
+        //setMarker("Fes-te una foto!", "Us hi espera una sorpresa! Tancament 16.30 h", 41.36487, 2.15557, R.drawable.cam);
 
-        setMarker("Assistència mèdica", "Tancament: 13.30 h", 41.40716, 2.10119, R.drawable.ambulancia);
-        setMarker("Ambulància", "Assistència mèdica", 41.42678, 2.12344, R.drawable.ambulancia);
+        setMarker("Control Castell de Montjuïc", "Tancament: 17:05 h", 41.361774, 2.162314, R.drawable.control);
+        setMarker("Control Mont Tàber", "Tancament: 18.20 h", 41.383420, 2.177092, R.drawable.control);
+        setMarker("Control Sant Pere Màrtir", "Tancament: 14.05 h", 41.393061, 2.097455, R.drawable.control);
+        setMarker("Control Tibidabo", "Tancament: 13.05 h", 41.421686, 2.119099, R.drawable.control);
+        setMarker("Control Turó Creueta del Coll", "Tancament: 11.30 h", 41.419911, 2.146881, R.drawable.control);
+        setMarker("Control Turó del Carmel", "Tancament: 11.15 h", 41.418475, 2.153175, R.drawable.control);
+        setMarker("Control Turó de la Peira", "Tancament: 10.00 h", 41.432796, 2.165544, R.drawable.control);
+        setMarker("Control Turó de les Roquetes", "Tancament: 08.30 h", 41.451314, 2.176326, R.drawable.control);
+        setMarker("Control Turó de La Rovira", "Tancament: 11.00 h", 41.419472, 2.162085, R.drawable.control);
 
-        setMarker("Avituallament Tibidabo", "Tancament: 13:05 h", 441.41914, 2.13904, R.drawable.avituallament);
-        setMarker("Avituallament Castell de Montjüic", "Tancament: 17:05 h", 441.41914, 2.13904, R.drawable.avituallament);
-        setMarker("Avituallament Hospital Sant Joan de Déu", "Tancament: 14.50 h", 41.38485, 2.10231, R.drawable.avituallament);
-        setMarker("Avituallament Rda de Dalt", "Tancament: 11:50 h", 41.42165, 2.11906, R.drawable.avituallament);
-        setMarker("Avituallament Castell de Montjuïc", "Tancament: 17:05 h", 41.36122, 2.16233, R.drawable.avituallament);
+        //setMarker("Assistència mèdica", "Tancament: 13.30 h", 41.40716, 2.10119, R.drawable.ambulancia);
+        //setMarker("Ambulància", "Assistència mèdica", 41.42678, 2.12344, R.drawable.ambulancia);
 
+        setMarker("Avituallament Tibidabo", "Tancament: 13:05 h", 41.421690, 2.119167,
+                R.drawable.avituallament);
+        setMarker("Avituallament Hospital Sant Joan de Déu", "Tancament: 14.50 h", 41.384850, 2.102310,
+                R.drawable.avituallament);
+        setMarker("Avituallament Ronda de Dalt", "Tancament: 11:50 h", 41.420494, 2.139901,
+                R.drawable.avituallament);
+        setMarker("Avituallament Montjuïc", "Tancament: 17:05 h", 41.361957, 2.162834,
+                R.drawable.avituallament);
+        setMarker("Avituallament Maternitat", "Tancament: 15:20 h", 41.381334, 2.126326,
+                R.drawable.avituallament);
+        setMarker("Avituallament Estadi Olímpic", "Tancament: 16:15 h", 41.365892, 2.154148,
+                R.drawable.avituallament);
+
+
+        /* No hi han lavabos aquest cop? XD
 
         setMarker("Lavabos", "", 41.38504, 2.10287, R.drawable.lavabos);
         setMarker("Lavabos", "", 41.42142, 2.1194, R.drawable.lavabos);
@@ -241,28 +258,36 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
         setMarker("Lavabos", "", 41.41917, 2.13929, R.drawable.lavabos);
         setMarker("Lavabos", "", 41.36886, 2.14674, R.drawable.lavabos);
         setMarker("Lavabos", "IES Les Corts. Horaris: 10.30 - 15.20 h", 41.38144, 2.12618, R.drawable.lavabos);
+        */
 
-        setMarker("Benvinguts al Parc Natural de Collserola", "", 41.42153, 2.13645, R.drawable.museu);
-        setMarker("CaixaFòrum", "Entrada lliure 10:00 - 15:00 h.", 41.37135, 2.15, R.drawable.museu);
-        setMarker("Poble Espanyol", "Entrada lliure de 10.00 a 15.00 h", 41.36914, 2.14704, R.drawable.museu);
-        setMarker("Museu Nacional d'Art de Catalunya", "Entrada lliure de 10 a 14.00 h", 41.36893, 2.15323, R.drawable.museu);
-        setMarker("Fundació Miró", "Entrada lliure de 10 a 13.45 h", 41.36818, 2.16011, R.drawable.museu);
-        setMarker("Museu Olímpic i de l'Esport", "Entrada lliure de 10.30 a 14.00 h", 41.36635, 2.15711, R.drawable.museu);
-        setMarker("Benvinguts al Jardí Botànic", "Entrada lliure de 10.30 a 16.45 h", 41.36282, 2.15724, R.drawable.museu);
-        setMarker("Castell de Montjuïc", "Visita gratuïta de 15 - 17:15 h.", 41.36402, 2.16677, R.drawable.museu);
+        /*setMarker("Benvinguts al Parc Natural de Collserola", "", 41.42153, 2.13645,
+                R.drawable.museu);*/
+        setMarker("CaixaFòrum", "Entrada lliure de 10:00 a 14:00 h.", 41.371304, 2.149712,
+                R.drawable.museu);
+        setMarker("Poble Espanyol", "Entrada lliure de 10:00 a 15:00 h", 41.369194, 2.146665,
+                R.drawable.museu);
+        setMarker("Museu Nacional d'Art de Catalunya", "Entrada lliure de 10:00 a 14:30 h",
+                41.368992, 2.153224, R.drawable.museu);
+        setMarker("Fundació Joan Miró", "Entrada lliure de 10 a 15:00 h", 41.368367, 2.159964,
+                R.drawable.museu);
+        setMarker("Museu Olímpic i de l'Esport", "Entrada lliure de 10:30 a 14:00 h",
+                41.366142, 2.157326, R.drawable.museu);
+        setMarker("Jardí Botànic", "Entrada lliure de 10:00 a 16:45 h", 41.361957, 2.162834, R.drawable.museu);
+        /*setMarker("Castell de Montjuïc", "Visita gratuïta de 15 - 17:15 h.",
+            41.36402, 2.16677, R.drawable.museu);*/
 
         //Sortides
 
-        setMarkerDeparture(40,"Sortida 40 km. Can Cuiàs", "Sortides de 7:00 - 7:30 h. Tancament: 7:50 h",
-                41.46001, 2.16822, R.drawable.sortida);
-        setMarkerDeparture(30,"Sortida 30 km. Parc de les Aigües", " Sortides: 8:00 - 9:00 h. Tancament: 9:30 h",
-                41.4124, 2.16605, R.drawable.sortida);
-        setMarkerDeparture(20,"Sortida 20 km. Vallvidrera", "sortides: 9:00 - 11:00 h. Tancament: 11:20 h",
-                41.41419, 2.10518, R.drawable.sortida);
-        setMarkerDeparture(15,"Sortida 15 km. Hospital Sant Joan de Déu", "sortida: ? h. Tancament: ? h",
-                41.3847645 , 2.1024492, R.drawable.sortida);
-        setMarkerDeparture(10,"Sortida 10 km. Font de Montjuïc", "sortida: 10:00 - 12:00 h. Tancament: 12:20 h",
-                41.370, 2.150, R.drawable.sortida);
+        setMarkerDeparture(40,"Sortida 40 km. Can Cuiàs", "Sortida: 7:00h. Tancament: 7:30 h",
+                41.459910, 2.168247, R.drawable.sortida);
+        setMarkerDeparture(30,"Sortida 30 km. Parc de les Aigües", " Sortida: 8:00h. Tancament: 9:00h",
+                41.412340, 2.166033, R.drawable.sortida);
+        setMarkerDeparture(20,"Sortida 20 km. Vallvidrera", "sortida: 9:00h. Tancament: 11:00h",
+                41.414073, 2.105199, R.drawable.sortida);
+        setMarkerDeparture(15,"Sortida 15 km. Hospital Sant Joan de Déu", "sortida: 9:00h. Tancament: 10:30h",
+                41.383750, 2.101865, R.drawable.sortida);
+        setMarkerDeparture(10,"Sortida 10 km. Font Màgica", "sortida: 10:00h. Tancament: 12:00h",
+                41.370668, 2.150492, R.drawable.sortida);
 
         LatLng pos = new LatLng(41.42188, 2.16504);
         int zoom = 12; //zoom has to be an integer 0-18
