@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private static ImageButton facebookbutton;
     private static ImageButton twitterbutton;
     private static ImageButton youtubebutton;
+    private static ImageButton instagrambutton;
     private static ImageButton announcements;
 
     private static ViewPager viewPager;
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButtontofacebook();
         ImageButtontotwitter();
         ImageButtontoyoutube();
+        ImageButtontoinstagram();
         CreationImagesViewPager();
         IniciarViewPager();
         ButtonToSobreApp();
@@ -381,6 +383,27 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationRepeat(Animation animation) {}
         });
     }
+
+    public void ImageButtontoinstagram() {
+        final Animation instagramAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        instagrambutton = (ImageButton) findViewById(R.id.instagram);
+        instagrambutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {view.startAnimation(instagramAnimation);}
+        });
+        instagramAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(MainActivity.this, Instagram.class);
+                startActivity(intent);
+            }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
+    }
+
 
     public void ButtonToSantJoanDeu(){
         final Animation SJDAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);

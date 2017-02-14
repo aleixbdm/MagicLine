@@ -131,6 +131,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Instagram"
+            android:label="@string/title_activity_instagram"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.obrasocialsjd.magicline.Instagram" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Sobrelapp"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_sobrelapp"

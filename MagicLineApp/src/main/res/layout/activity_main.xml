@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/magicRed"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
 
@@ -21,58 +21,73 @@
         android:layout_marginBottom="@dimen/elements_vertical_margin">
 
         <ImageButton
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.1"
             android:id="@+id/announcements"
-            android:layout_weight="2"
-            android:src="@drawable/ic_announcement_white_48dp"
+            android:src="@drawable/attention"
             android:scaleType="fitCenter"
             android:background="@null" />
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/magiclinetransparencishort"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/logomagicline"
             android:id="@+id/imageView5"
-            android:layout_weight="1.5"
-            android:scaleType="centerInside" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
 
         <ImageButton
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.1"
             android:id="@+id/facebook"
-            android:src="@drawable/facebook_48"
+            android:src="@drawable/facebook"
             android:adjustViewBounds="false"
             android:background="@null"
             android:scaleType="fitCenter"
             android:layout_alignParentTop="true"
-            android:layout_gravity="center"
-            android:layout_weight="2" />
+            android:layout_gravity="center" />
 
         <ImageButton
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.1"
             android:id="@+id/twitter"
-            android:src="@drawable/twitter_48"
+            android:src="@drawable/twitter"
             android:adjustViewBounds="false"
             android:background="@null"
             android:scaleType="fitCenter"
             android:layout_alignParentTop="true"
-            android:layout_gravity="center"
-            android:layout_weight="2" />
+            android:layout_gravity="center" />
 
         <ImageButton
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/youtube"
-            android:src="@drawable/youtube_48"
+            android:layout_weight="0.1"
+            android:id="@+id/instagram"
+            android:src="@drawable/instagram"
             android:adjustViewBounds="false"
             android:background="@null"
             android:scaleType="fitCenter"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_gravity="center"
-            android:layout_weight="2" />
+            android:layout_gravity="center" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:id="@+id/youtube"
+            android:src="@drawable/youtube"
+            android:adjustViewBounds="false"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center" />
 
     </LinearLayout>
 
@@ -89,7 +104,7 @@
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/magicRed"
+            android:background="@color/white"
             android:padding="@dimen/padding_noticies">
         </android.support.v4.view.ViewPager>
 
@@ -135,9 +150,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button1"
                     android:textSize="@dimen/size_text_buttons"
+                    android:textColor="@color/magicRed"
                     android:text="@string/button1"
-                    android:drawableLeft="@mipmap/ic_place_white_48dp"
-
+                    android:drawableLeft="@drawable/marker"
                     android:padding="@dimen/padding_buttons"
                     android:background="@null"/>
 
@@ -155,8 +170,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button2"
                     android:textSize="@dimen/size_text_buttons"
+                    android:textColor="@color/magicRed"
                     android:text="@string/button2"
-                    android:drawableLeft="@mipmap/ic_palette_white_48dp"
+                    android:drawableLeft="@drawable/palette"
                     android:padding="@dimen/padding_buttons"
                     android:background="@null"/>
 
@@ -187,9 +203,10 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button3"
                     android:textSize="@dimen/size_text_buttons"
+                    android:textColor="@color/magicRed"
                     android:text="@string/button3"
                     android:textAllCaps="false"
-                    android:drawableLeft="@mipmap/ic_tag_faces_white_48dp"
+                    android:drawableLeft="@drawable/smile"
                     android:background="@null" />
 
             </FrameLayout>
@@ -206,8 +223,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button4"
                     android:textSize="@dimen/size_text_buttons"
+                    android:textColor="@color/magicRed"
                     android:text="@string/button4"
-                    android:drawableLeft="@mipmap/ic_call_white_48dp"
+                    android:drawableLeft="@drawable/phone"
                     android:padding="@dimen/padding_buttons"
                     android:background="@null"/>
 
@@ -229,7 +247,7 @@
             android:layout_gravity="left"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/SantJoandeDeu"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/magicRed"
             android:textStyle="bold|italic"
             android:textSize="20dp"
             android:id="@+id/button5"
@@ -242,7 +260,7 @@
             android:layout_gravity="right"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/SobreApp"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/magicRed"
             android:textStyle="bold|italic"
             android:textSize="20dp"
             android:id="@+id/button6"
