@@ -1,39 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#ffffff"
     tools:context=".SplashScreen">
 
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="58dp" />
-
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sjddlogo"
-        android:src="@drawable/pantallasplash"
-        android:baselineAlignBottom="true"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:id="@+id/ninots"
+        android:src="@drawable/ninots"
         android:layout_gravity="center"
-        android:layout_marginBottom="200dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
         android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:id="@+id/sjddlogo"
+        android:src="@drawable/pantallasplash"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_weight="0.15"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
         android:id="@+id/upclogo"
         android:src="@drawable/pantallaupcsplash"
-        android:baselineAlignBottom="false"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/progressBar1"
-        android:background="#ffffff" />
+        android:layout_gravity="center"
+        android:background="#ffffff"
+        android:layout_marginBottom="50dp"/>
 
-</RelativeLayout>
+</LinearLayout>

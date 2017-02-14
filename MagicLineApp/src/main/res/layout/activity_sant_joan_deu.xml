@@ -34,7 +34,9 @@
             android:scaleType="fitXY"
             tools:background="#00ffffff"
             android:background="@drawable/return_icon"
-            android:layout_width="70dp" />
+            android:layout_width="70dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -47,7 +49,7 @@
             android:textColor="@color/magicRed"
             android:textStyle="bold"
             android:layout_weight="1"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <View
