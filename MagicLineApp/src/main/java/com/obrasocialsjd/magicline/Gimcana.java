@@ -1,9 +1,12 @@
 package com.obrasocialsjd.magicline;
 
+import android.app.ActionBar;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -16,6 +19,8 @@ import android.widget.ImageButton;
 
 public class Gimcana extends AppCompatActivity {
 
+    private Activity activity;
+    private ImageButton returnButton;
     private Button premis_condicions;
     private ImageButton petit_explorador;
     private ImageButton gran_explorador;
@@ -24,9 +29,23 @@ public class Gimcana extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gimcana);
+
+        activity = this;
+
+        ButtonReturn();
         ButtonToPremisICondicions();
         ButtonToPetitExplorador();
         ButtonToGranExplorador();
+    }
+
+    private void ButtonReturn() {
+        returnButton = (ImageButton) findViewById(R.id.returnButton);
+        returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                activity.finish();
+            }
+        });
     }
 
     private void ButtonToPremisICondicions() {

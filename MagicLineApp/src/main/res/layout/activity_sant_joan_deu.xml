@@ -21,17 +21,34 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-    <TextView
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/titol_SantJoan"
-        android:id="@+id/titol_ObraSocial"
-        android:paddingLeft="5dp"
-        android:lines="1"
-        android:maxLines="1"
-        android:textColor="@color/magicRed"
-        android:textSize="25dp"
-        android:textStyle="bold"/>
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/return_icon"
+            android:id="@+id/returnButton"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            tools:background="#00ffffff"
+            android:background="@drawable/return_icon"
+            android:layout_width="70dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titol_SantJoan"
+            android:id="@+id/titol_ObraSocial"
+            android:paddingLeft="5dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/magicRed"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="22sp" />
+    </LinearLayout>
 
     <View
         android:layout_marginTop="2dp"

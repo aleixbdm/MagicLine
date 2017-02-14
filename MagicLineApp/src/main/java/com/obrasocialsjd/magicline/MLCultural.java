@@ -1,5 +1,6 @@
 package com.obrasocialsjd.magicline;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 /**
  * Created by Usuari on 04/02/2017.
@@ -15,6 +17,8 @@ import android.widget.Button;
 
 public class MLCultural extends AppCompatActivity {
 
+    private Activity activity;
+    private ImageButton returnButton;
     private Button btnConcerts;
     private Button btnArts;
     private Button btnMuseus;
@@ -26,9 +30,23 @@ public class MLCultural extends AppCompatActivity {
         btnConcerts = (Button) findViewById(R.id.concert);
         btnArts = (Button) findViewById(R.id.arts);
         btnMuseus = (Button) findViewById(R.id.museus);
+
+        activity = this;
+
+        ButtonReturn();
         ButtonToConcerts();
         ButtonToArts();
         ButtonToMuseus();
+    }
+
+    private void ButtonReturn() {
+        returnButton = (ImageButton) findViewById(R.id.returnButton);
+        returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                activity.finish();
+            }
+        });
     }
 
     public void ButtonToConcerts() {

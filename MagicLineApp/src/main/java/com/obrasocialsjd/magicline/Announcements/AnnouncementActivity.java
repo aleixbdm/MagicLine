@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -14,6 +16,9 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class AnnouncementActivity extends Activity {
+
+    private Activity activity;
+    private ImageButton returnButton;
         ListView list;
         CustomAdapter adapter;
         public AnnouncementActivity CustomListView = null;
@@ -25,6 +30,10 @@ public class AnnouncementActivity extends Activity {
 
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_announcement);
+
+            activity = this;
+
+            ButtonReturn();
 
             CustomListView = this;
 
@@ -39,6 +48,16 @@ public class AnnouncementActivity extends Activity {
             list.setAdapter( adapter );
 
         }
+
+    private void ButtonReturn() {
+        returnButton = (ImageButton) findViewById(R.id.returnButton);
+        returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                activity.finish();
+            }
+        });
+    }
 
         /****** Function to set data in ArrayList *************/
         public void setListData()
