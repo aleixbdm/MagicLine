@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageFragment[] images;
     private static int num_images;
     private static RadioGroup radioGroup;
+    private static Timer timer;
     private static final int tempsScroll = 5000;
 
     private static final int MY_PERMISSION_CALL_PHONE_REQUEST = 0x1;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         activity = this;
 
-        num_images = 6;
+        num_images = 5;
 
         ButtonToMap();
         ButtonToTrucadaEmergencia();
@@ -254,7 +255,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void IniciarViewPager() {
-        final Handler handler = new Handler();
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         customPagerAdapter = new CustomPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(customPagerAdapter);
@@ -290,8 +290,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageScrollStateChanged(int state) {}
         });
+    }
 
-        Timer timer = new Timer();
+    @Override
+    protected void onResume() {
+        final Handler handler = new Handler();
+        timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
@@ -305,6 +309,14 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         },tempsScroll,tempsScroll);
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        timer.cancel();
+        timer = null;
+        super.onPause();
     }
 
     public class CustomPagerAdapter extends FragmentPagerAdapter {

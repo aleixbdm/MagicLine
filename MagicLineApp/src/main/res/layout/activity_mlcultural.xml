@@ -45,102 +45,176 @@
             android:layout_weight="1" />
     </LinearLayout>
 
-    <View
-        android:layout_marginTop="2dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/magicRed"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/text_mlcultural"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"
-        android:id="@+id/text_mlcultural"
-        android:layout_centerVertical="true"
-        android:textStyle="normal"
-        android:textSize="18dp"
-        android:padding="10dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/button_size"
-        android:layout_marginTop="@dimen/elements_vertical_margin"
-        android:layout_marginBottom="@dimen/elements_vertical_margin"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/concert"
-            android:background="@drawable/button_style_2"
-            android:textSize="15dp"
-            android:textColor="@color/magicRed"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold|italic"
-            android:text="@string/concert_SJD"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"/>
-
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/button_size"
-        android:layout_marginTop="@dimen/elements_vertical_margin"
-        android:layout_marginBottom="@dimen/elements_vertical_margin"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+            <View
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/magicRed"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/arts"
-            android:background="@drawable/button_style_2"
-            android:textSize="15dp"
-            android:textColor="@color/magicRed"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold|italic"
-            android:text="@string/arts_carrer"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/intro_mlcultural"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:id="@+id/intro_mlcultural"
+                android:layout_centerVertical="true"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:padding="10dp"/>
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/museus_gratuits"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:id="@+id/museus_gratuits"
+                android:layout_centerVertical="true"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:paddingTop="10dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/button_size"
-        android:layout_marginTop="@dimen/elements_vertical_margin"
-        android:layout_marginBottom="@dimen/elements_vertical_margin"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info_museus_gratuits"
+                android:layout_marginTop="1dp"
+                android:textColor="#000000"
+                android:id="@+id/info_museus_gratuits"
+                android:layout_centerVertical="true"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:padding="10dp"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/museus"
-            android:background="@drawable/button_style_2"
-            android:textSize="15dp"
-            android:textColor="@color/magicRed"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold|italic"
-            android:text="@string/museus"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/llista_llocs_gratuits"
+                android:layout_marginTop="1dp"
+                android:textColor="#000000"
+                android:id="@+id/llista_llocs_gratuits"
+                android:layout_centerVertical="true"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:layout_marginLeft="20dp"/>
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info2_museus_gratuits"
+                android:layout_marginTop="1dp"
+                android:textColor="#000000"
+                android:id="@+id/info2_museus_gratuits"
+                android:layout_centerVertical="true"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:padding="10dp"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info2_mlcultural"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:id="@+id/info2_mlcultural"
+                android:layout_centerVertical="true"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:padding="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:layout_marginTop="@dimen/elements_vertical_margin"
+                android:layout_marginBottom="@dimen/elements_vertical_margin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/concert"
+                    android:background="@drawable/button_style_2"
+                    android:textSize="15dp"
+                    android:textColor="@color/magicRed"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold|italic"
+                    android:text="@string/concert_SJD"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:layout_marginTop="@dimen/elements_vertical_margin"
+                android:layout_marginBottom="@dimen/elements_vertical_margin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/arts"
+                    android:background="@drawable/button_style_2"
+                    android:textSize="15dp"
+                    android:textColor="@color/magicRed"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold|italic"
+                    android:text="@string/arts_carrer"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_size"
+                android:layout_marginTop="@dimen/elements_vertical_margin"
+                android:layout_marginBottom="@dimen/elements_vertical_margin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/museus"
+                    android:background="@drawable/button_style_2"
+                    android:textSize="15dp"
+                    android:textColor="@color/magicRed"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold|italic"
+                    android:text="@string/museus"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

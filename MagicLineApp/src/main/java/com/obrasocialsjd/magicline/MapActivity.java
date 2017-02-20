@@ -222,7 +222,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
         setMarker("Control Mont Tàber", "Tancament: 18:45 h", 41.383420, 2.177092, R.drawable.control);
         setMarker("Control Sant Pere Màrtir", "Tancament: 14.30 h", 41.393061, 2.097455, R.drawable.control);
         setMarker("Control Tibidabo", "Tancament: 13.05 h", 41.421686, 2.119099, R.drawable.control);
-        setMarker("Control Turó Creueta del Coll", "Tancament: 11.30 h", 41.419911, 2.146881, R.drawable.control);
+        setMarker("Control Turó Creueta del Coll", "Tancament: 11.45 h", 41.419911, 2.146881, R.drawable.control);
         setMarker("Control Turó del Carmel", "Tancament: 11.30 h", 41.418475, 2.153175, R.drawable.control);
         setMarker("Control Turó de la Peira", "Tancament: 10.00 h", 41.432796, 2.165544, R.drawable.control);
         setMarker("Control Turó de les Roquetes", "Tancament: 08.30 h", 41.451314, 2.176326, R.drawable.control);

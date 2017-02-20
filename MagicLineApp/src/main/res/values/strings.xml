@@ -6,7 +6,7 @@
 
 
     <string name="InfoMagicLine">Gaudiu del camí, feu volar la imaginació a
-    cada pas i deixeu contagiar-vos per l’esperit de la Magic Line.\nPerò recordeu: <b>amb somiar no en tenim prou!</b></string>
+    cada pas i deixeu contagiar-vos per l\'esperit de la Magic Line.\nPerò recordeu: <b>amb somiar no en tenim prou!</b></string>
 
     <string name="titol_SantJoan">Obra Social Sant Joan de Déu</string>
     <string name="text_SantJoan">A <b>Sant Joan de Déu</b> atenem persones que es troben en situació de vulnerabilitat. \n \n A Barcelona,
@@ -26,6 +26,21 @@
         distribuint amb la mateixa llicència GPL i es faci esment dels seus autors originals.</string>
 
     <string name="title_mlcultural">ML Cultural</string>
+    <string name="intro_mlcultural">La Magic Line també és cultura. L\'acollida i l\'acompanyament formen part de l\'essència de Sant Joan de Déu,
+        també el dia de la caminada, per això us oferim propostes culturals al llarg de recorregut.</string>
+    <string name="museus_gratuits"><b>Museus gratuïts</b></string>
+    <string name="info_museus_gratuits">El passaturons de la Magic Line us permet accedir gratuïtament el dia de la caminada a:</string>
+    <string name="llista_llocs_gratuits"><b>-</b> CaixaFòrum \n
+        <b>-</b> Poble Espanyol \n
+        <b>-</b> MNAC \n
+        <b>-</b> Fundació Joan Miró \n
+        <b>-</b> Museu Olímpic i de l\'Esport \n
+        <b>-</b> Jardí Botànic</string>
+    <string name="info2_museus_gratuits">Us recomanem accedir-hi entre les <b>10h</b> i les <b>14:30h</b>, per arribar a temps als espectacles
+        culturals del Castell de Montjuïc i la plaça de la Catedral. L\'accés als diferents equipaments estarà regulat segons l’horari i
+        l\'aforament en cadascun d\'ells.</string>
+    <string name="info2_mlcultural"><b>També durant el mes de març podreu accedir gratuïtament a aquests equipaments ensenyant el Passaturons, a més del
+        Museu Agbar de les Aigües i excepte al Poble Espanyol.</b></string>
     <string name="text_mlcultural">La Magic Line t\'ofereix propostes culturals.</string>
     <string name="concert_SJD">Concert Solidari</string>
     <string name="arts_carrer">Arts al carrer</string>
@@ -35,13 +50,12 @@
     <string name="intro_gimcana"><b>En col·laboració amb Petit Explorador i Gran Explorador</b></string>
     <string name="reptes">REPTES AMB PREMI</string>
     <string name="intro2_gimcana">Comparteix una foto o vídeo d\’aquests reptes a les xarxes socials amb
-        les etiquetes: <b>#ExploraML</b> i <b>#MagicLine2017</b></string>
+        l\'etiqueta: <b>#MagicLine2017</b></string>
     <string name="proves1_gimcana"><b>-</b> Parla amb un altre equip de la Magic Line \n
         <b>-</b> Dóna les gràcies a un voluntari \n
         <b>-</b> Comparteix un lloc de la ciutat que no coneguessis \n
-        <b>-</b> Suma algú a fer uns metres de caminada amb tu \n
-        <b>-</b> Amb quin contingut del laberint et reconeixes?</string>
-    <string name="proves2_gimcana">Cada foto o vídeo que pugis amb les dues etiquetes entra a sorteig.</string>
+        <b>-</b> Explica\'ns un moment il·lusionant de la caminada</string>
+    <string name="proves2_gimcana">Cada foto o vídeo que pugis amb l\'etiqueta entra a sorteig.</string>
     <string name="premis_condicions">Premis i condicions</string>
 
     <string name="info_premis">Pugeu les fotos a les xarxes socials amb els hashtags <b>#ExploraML</b> i <b>#MagicLine2017</b> i
@@ -82,7 +96,7 @@
     <string name="title_activity_instagram">Instagram</string>
     <string name="button1">MAPA I PUNTS D\'INTERÈS \</string>
     <string name="button2">ML CULTURAL \</string>
-    <string name="button3">#ExploraML \</string>
+    <string name="button3">EXPLORA LA ML \</string>
     <string name="button4">EMERGÈNCIES \</string>
 
     <string name="pop_up_title">TRUCADA D\'EMERGÈNCIES</string>
@@ -106,14 +120,16 @@
     <string name="body_announcement_default">No hi ha descripció de la notícia.</string>
 
     <string name="title_concert">Concert solidari</string>
-    <string name="lloc_hora_concert"><b>Diumenge 5 de març a partir de les 17h a la plaça de la Catedral de Barcelona.</b></string>
+    <string name="lloc_hora_concert"><b>Diumenge 5 de març a partir de les 17h a la plaça de la Catedral de Barcelona pugen a l\'escenari músics de
+        renom junts a usuaris dels centres de Sant Joan de Déu i els programes socials del Taller de músics.</b></string>
     <string name="info_concert"><b>Gossos</b>, <b>Quimi Portet</b>, <b>Animal</b>, <b>Andreu Rifé</b>, <b>Motis &amp; Chamorro &amp; Motis Trio</b>
         i <b>Clams</b>. \n\n En un concert presentat per <b>Joan Dausà</b> amb Manu Danso, Àngels Arnaus, Assumpció Malagarriga, Yoyo Marra, Carlos
         Ariza, Omar Boltes, Fredy Garcia i la Baix Llobregat Music Line.\n\n </string>
 
     <string name="title_arts">Arts al carrer</string>
     <string name="info1_arts"><b>Diumenge 5 de març teatre, dansa, graffiti, pintura... durant la caminada.</b></string>
-    <string name="info2_arts">Estigueu atents! Trobareu propostes d’arts escèniques i plàstiques, interpretades per artistes voluntaris implicats en
+    <string name="info2_arts">Al fossar del Castell de Montjuïc us espera un espai per dinar amb espectacles d’arreu del món!</string>
+    <string name="info3_arts">Estigueu atents! Trobareu propostes d’arts escèniques i plàstiques, interpretades per artistes voluntaris implicats en
         la inclusió social.</string>
 
     <string name="title_museus">Museus gratuïts</string>
