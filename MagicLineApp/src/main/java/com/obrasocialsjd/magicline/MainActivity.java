@@ -10,7 +10,7 @@ import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
     private static ViewPager viewPager;
     private static int page;
     private static CustomPagerAdapter customPagerAdapter;
-    private ImageFragment[] images;
     private static int num_images;
     private static RadioGroup radioGroup;
     private static Timer timer;
+    private static TimerTask timerTask;
     private static final int tempsScroll = 5000;
 
     private static final int MY_PERMISSION_CALL_PHONE_REQUEST = 0x1;
@@ -85,8 +85,6 @@ public class MainActivity extends AppCompatActivity {
         ButtonToSantJoanDeu();
 
         ButtonAnnouncements();
-
-        //GetTokenId();
 
         SubscribeToAnnouncements();
     }
@@ -137,12 +135,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void CreationImagesViewPager() {
-        images = new ImageFragment[num_images];
-        for (int i = 0; i < num_images; i++) {
-            String imageName = "noticia" + String.valueOf(i+1);
-            int imageIdentifier = getResources().getIdentifier(imageName, "drawable", getPackageName());
-            images[i] = ImageFragment.newInstance(imageIdentifier);
-        }
+        customPagerAdapter = new CustomPagerAdapter(getSupportFragmentManager());
+        customPagerAdapter.setImages();
     }
 
     private void ButtonToMap() {
@@ -256,9 +250,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void IniciarViewPager() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-        customPagerAdapter = new CustomPagerAdapter(getSupportFragmentManager());
+        viewPager.removeAllViews();
         viewPager.setAdapter(customPagerAdapter);
-        viewPager.invalidate();
         page = 0;
 
         radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
@@ -272,8 +265,33 @@ public class MainActivity extends AppCompatActivity {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                viewPager.setCurrentItem(i-1);
-                page = i-1;
+                Log.e("onChecked-i",String.valueOf(i));
+                Log.e("onChecked-page",String.valueOf(page));
+                if (i > 0 && i <= num_images) {
+                    viewPager.setCurrentItem(i - 1);
+                    page = i - 1;
+                    timer.cancel();
+                    timer = new Timer();
+                    final Handler handler = new Handler();
+                    timerTask = new TimerTask() {
+                        @Override
+                        public void run() {
+                            handler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Log.e("Timer",String.valueOf(page));
+                                    if (page >= num_images) page = 0;
+                                    else {
+                                        page++;
+                                        if (page >= num_images) page = 0;
+                                        viewPager.setCurrentItem(page);
+                                    }
+                                }
+                            });
+                        }
+                    };
+                    timer.scheduleAtFixedRate(timerTask,tempsScroll,tempsScroll);
+                }
             }
         });
 
@@ -283,8 +301,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                RadioButton radioButton = (RadioButton) radioGroup.getChildAt(position);
-                radioButton.setChecked(true);
+                Log.e("onPageSelected",String.valueOf(page));
+                if (position >= 0 && position < num_images) {
+                    RadioButton radioButton = (RadioButton) radioGroup.getChildAt(position);
+                    radioButton.setChecked(true);
+                }
             }
 
             @Override
@@ -294,32 +315,44 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
+        viewPager.removeAllViews();
+        viewPager.setAdapter(customPagerAdapter);
+        viewPager.setCurrentItem(page);
         final Handler handler = new Handler();
         timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
+        timerTask = new TimerTask() {
             @Override
             public void run() {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        viewPager.setCurrentItem(page);
-                        page++;
-                        if (page == num_images) page = 0;
+                        Log.e("Timer",String.valueOf(page));
+                        if (page >= num_images) page = 0;
+                        else {
+                            page++;
+                            if (page >= num_images) page = 0;
+                            viewPager.setCurrentItem(page);
+                        }
                     }
                 });
             }
-        },tempsScroll,tempsScroll);
+        };
+        timer.scheduleAtFixedRate(timerTask,tempsScroll,tempsScroll);
         super.onResume();
     }
 
     @Override
     protected void onPause() {
+        Log.e("onPause",String.valueOf(page));
         timer.cancel();
         timer = null;
         super.onPause();
     }
 
-    public class CustomPagerAdapter extends FragmentPagerAdapter {
+    public class CustomPagerAdapter extends FragmentStatePagerAdapter {
+
+
+        private ImageFragment[] images;
 
         public CustomPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -333,6 +366,15 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return num_images;
+        }
+
+        public void setImages() {
+            images = new ImageFragment[num_images];
+            for (int i = 0; i < num_images; i++) {
+                String imageName = "noticia" + String.valueOf(i+1);
+                int imageIdentifier = getResources().getIdentifier(imageName, "drawable", getPackageName());
+                images[i] = ImageFragment.newInstance(imageIdentifier);
+            }
         }
     }
 
