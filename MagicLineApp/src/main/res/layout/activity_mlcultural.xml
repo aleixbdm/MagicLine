@@ -73,67 +73,6 @@
                 android:textSize="18dp"
                 android:padding="10dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/museus_gratuits"
-                android:layout_marginTop="10dp"
-                android:textColor="#000000"
-                android:id="@+id/museus_gratuits"
-                android:layout_centerVertical="true"
-                android:textStyle="normal"
-                android:textSize="18dp"
-                android:paddingTop="10dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/info_museus_gratuits"
-                android:layout_marginTop="1dp"
-                android:textColor="#000000"
-                android:id="@+id/info_museus_gratuits"
-                android:layout_centerVertical="true"
-                android:textStyle="normal"
-                android:textSize="18dp"
-                android:padding="10dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/llista_llocs_gratuits"
-                android:layout_marginTop="1dp"
-                android:textColor="#000000"
-                android:id="@+id/llista_llocs_gratuits"
-                android:layout_centerVertical="true"
-                android:textStyle="normal"
-                android:textSize="18dp"
-                android:padding="10dp"
-                android:layout_marginLeft="20dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/info2_museus_gratuits"
-                android:layout_marginTop="1dp"
-                android:textColor="#000000"
-                android:id="@+id/info2_museus_gratuits"
-                android:layout_centerVertical="true"
-                android:textStyle="normal"
-                android:textSize="18dp"
-                android:padding="10dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/info2_mlcultural"
-                android:layout_marginTop="10dp"
-                android:textColor="#000000"
-                android:id="@+id/info2_mlcultural"
-                android:layout_centerVertical="true"
-                android:textStyle="normal"
-                android:textSize="18dp"
-                android:padding="10dp"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/button_size"
@@ -145,13 +84,13 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/concert"
+                    android:id="@+id/museus"
                     android:background="@drawable/button_style_2"
                     android:textSize="15dp"
                     android:textColor="@color/magicRed"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold|italic"
-                    android:text="@string/concert_SJD"
+                    android:text="@string/title_museus"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -159,7 +98,6 @@
                     android:layout_alignParentEnd="true"/>
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -178,7 +116,7 @@
                     android:textColor="@color/magicRed"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold|italic"
-                    android:text="@string/arts_carrer"
+                    android:text="@string/title_arts"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -198,13 +136,13 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/museus"
+                    android:id="@+id/concert"
                     android:background="@drawable/button_style_2"
                     android:textSize="15dp"
                     android:textColor="@color/magicRed"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textStyle="bold|italic"
-                    android:text="@string/museus"
+                    android:text="@string/title_concert"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"

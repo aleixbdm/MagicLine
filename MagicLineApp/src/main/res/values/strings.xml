@@ -28,7 +28,9 @@
     <string name="title_mlcultural">ML Cultural</string>
     <string name="intro_mlcultural">La Magic Line també és cultura. L\'acollida i l\'acompanyament formen part de l\'essència de Sant Joan de Déu,
         també el dia de la caminada, per això us oferim propostes culturals al llarg de recorregut.</string>
-    <string name="museus_gratuits"><b>Museus gratuïts</b></string>
+
+    <!--  CONTINGUT MUSEUS GRATUITS  -->
+    <string name="title_museus"><b>Museus gratuïts</b></string>
     <string name="info_museus_gratuits">El passaturons de la Magic Line us permet accedir gratuïtament el dia de la caminada a:</string>
     <string name="llista_llocs_gratuits"><b>-</b> CaixaFòrum \n
         <b>-</b> Poble Espanyol \n
@@ -39,12 +41,23 @@
     <string name="info2_museus_gratuits">Us recomanem accedir-hi entre les <b>10h</b> i les <b>14:30h</b>, per arribar a temps als espectacles
         culturals del Castell de Montjuïc i la plaça de la Catedral. L\'accés als diferents equipaments estarà regulat segons l’horari i
         l\'aforament en cadascun d\'ells.</string>
-    <string name="info2_mlcultural"><b>També durant el mes de març podreu accedir gratuïtament a aquests equipaments ensenyant el Passaturons, a més del
+    <string name="info3_museus_gratuits"><b>També durant el mes de març podreu accedir gratuïtament a aquests equipaments ensenyant el Passaturons, a més del
         Museu Agbar de les Aigües i excepte al Poble Espanyol.</b></string>
-    <string name="text_mlcultural">La Magic Line t\'ofereix propostes culturals.</string>
-    <string name="concert_SJD">Concert Solidari</string>
-    <string name="arts_carrer">Arts al carrer</string>
-    <string name="museus">Museus gratuïts</string>
+
+    <!--  CONTINGUT ARTS AL CARRER  -->
+    <string name="title_arts">Arts al carrer</string>
+    <string name="info1_arts"><b>Diumenge 5 de març teatre, dansa, graffiti, pintura... durant la caminada.</b></string>
+    <string name="info2_arts">Al fossar del Castell de Montjuïc us espera un espai per dinar amb espectacles d’arreu del món!</string>
+    <string name="info3_arts">Estigueu atents! Trobareu propostes d’arts escèniques i plàstiques, interpretades per artistes voluntaris implicats en
+        la inclusió social.</string>
+
+    <!--  CONTINGUT CONCERT  -->
+    <string name="title_concert">Concert solidari</string>
+    <string name="lloc_hora_concert"><b>Diumenge 5 de març a partir de les 17h a la plaça de la Catedral de Barcelona pugen a l\'escenari músics de
+        renom junts a usuaris dels centres de Sant Joan de Déu i els programes socials del Taller de músics.</b></string>
+    <string name="info_concert"><b>Gossos</b>, <b>Quimi Portet</b>, <b>Animal</b>, <b>Andreu Rifé</b>, <b>Motis &amp; Chamorro &amp; Motis Trio</b>
+        i <b>Clams</b>. \n\n En un concert presentat per <b>Joan Dausà</b> amb Manu Danso, Àngels Arnaus, Assumpció Malagarriga, Yoyo Marra, Carlos
+        Ariza, Omar Boltes, Fredy Garcia i la Baix Llobregat Music Line.\n\n </string>
 
     <string name="title_gimcana">Explora Magic Line</string>
     <string name="intro_gimcana"><b>En col·laboració amb Petit Explorador i Gran Explorador</b></string>
@@ -118,24 +131,6 @@
     <string name="title_announcement_default">Notícia Magic Line</string>
     <string name="body_notification_default">Hi ha una notícia nova!</string>
     <string name="body_announcement_default">No hi ha descripció de la notícia.</string>
-
-    <string name="title_concert">Concert solidari</string>
-    <string name="lloc_hora_concert"><b>Diumenge 5 de març a partir de les 17h a la plaça de la Catedral de Barcelona pugen a l\'escenari músics de
-        renom junts a usuaris dels centres de Sant Joan de Déu i els programes socials del Taller de músics.</b></string>
-    <string name="info_concert"><b>Gossos</b>, <b>Quimi Portet</b>, <b>Animal</b>, <b>Andreu Rifé</b>, <b>Motis &amp; Chamorro &amp; Motis Trio</b>
-        i <b>Clams</b>. \n\n En un concert presentat per <b>Joan Dausà</b> amb Manu Danso, Àngels Arnaus, Assumpció Malagarriga, Yoyo Marra, Carlos
-        Ariza, Omar Boltes, Fredy Garcia i la Baix Llobregat Music Line.\n\n </string>
-
-    <string name="title_arts">Arts al carrer</string>
-    <string name="info1_arts"><b>Diumenge 5 de març teatre, dansa, graffiti, pintura... durant la caminada.</b></string>
-    <string name="info2_arts">Al fossar del Castell de Montjuïc us espera un espai per dinar amb espectacles d’arreu del món!</string>
-    <string name="info3_arts">Estigueu atents! Trobareu propostes d’arts escèniques i plàstiques, interpretades per artistes voluntaris implicats en
-        la inclusió social.</string>
-
-    <string name="title_museus">Museus gratuïts</string>
-    <string name="info1_museus"><b>Diumenge 5 de març i durant tot el mes de març.</b></string>
-    <string name="info2_museus">Accés gratuït ensenyant el passaturons a Caixa Fòrum, Poble Espanyol, MNAC, Fundació Joan Miró, Museu Olímpic i de
-        l\'Esport, Museu de les Ciències Naturals</string>
 
     <string name="no_notificacions">No tens cap notificació</string>
 
