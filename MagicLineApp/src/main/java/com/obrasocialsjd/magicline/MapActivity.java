@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
 
 import android.net.Uri;
@@ -41,18 +40,13 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
-import com.google.maps.android.kml.KmlContainer;
 import com.google.maps.android.kml.KmlLayer;
-import com.google.maps.android.kml.KmlPlacemark;
 
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback
         , ConnectionCallbacks, OnConnectionFailedListener {
@@ -83,6 +77,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
     private Button button_10km;
     private Button button_15km;
     private Button button_20km;
+    private Button button_25km;
     private Button button_30km;
     private Button button_40km;
     private Button actual_button;
@@ -310,7 +305,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
 
         //ROUTES
         try {
-            layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_10, getApplicationContext());
+            layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2018_10, getApplicationContext());
             layerMap.addLayerToMap();
         } catch (XmlPullParserException e) {
             e.printStackTrace();
@@ -329,7 +324,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 hideShowDepartureMarkers(10);
                 layerMap.removeLayerFromMap();
                 try {
-                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_10, getApplicationContext());
+                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2018_10, getApplicationContext());
                     layerMap.addLayerToMap();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -349,7 +344,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 hideShowDepartureMarkers(15);
                 layerMap.removeLayerFromMap();
                 try {
-                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_15, getApplicationContext());
+                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2018_15, getApplicationContext());
                     layerMap.addLayerToMap();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -369,7 +364,27 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 hideShowDepartureMarkers(20);
                 layerMap.removeLayerFromMap();
                 try {
-                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_20, getApplicationContext());
+                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2018_20, getApplicationContext());
+                    layerMap.addLayerToMap();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        button_25km = (Button) viewFragment.findViewById(R.id.button_25km);
+        button_25km.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                actual_button.setTextColor(getResources().getColor(R.color.buttonNotPressed));
+                actual_button = button_25km;
+                actual_button.setTextColor(getResources().getColor(R.color.buttonPressed));
+                hideShowDepartureMarkers(20);
+                layerMap.removeLayerFromMap();
+                try {
+                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2018_25, getApplicationContext());
                     layerMap.addLayerToMap();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -389,7 +404,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 hideShowDepartureMarkers(30);
                 layerMap.removeLayerFromMap();
                 try {
-                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_30, getApplicationContext());
+                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2018_30, getApplicationContext());
                     layerMap.addLayerToMap();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -409,7 +424,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 hideShowDepartureMarkers(40);
                 layerMap.removeLayerFromMap();
                 try {
-                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2017_40, getApplicationContext());
+                    layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2018_40, getApplicationContext());
                     layerMap.addLayerToMap();
                 } catch (IOException e) {
                     e.printStackTrace();
