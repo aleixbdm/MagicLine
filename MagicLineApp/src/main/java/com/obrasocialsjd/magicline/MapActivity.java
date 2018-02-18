@@ -381,7 +381,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback
                 actual_button.setTextColor(getResources().getColor(R.color.buttonNotPressed));
                 actual_button = button_25km;
                 actual_button.setTextColor(getResources().getColor(R.color.buttonPressed));
-                hideShowDepartureMarkers(20);
+                hideShowDepartureMarkers(25);
                 layerMap.removeLayerFromMap();
                 try {
                     layerMap = new KmlLayer(mMap, R.raw.ml_barcelona_2018_25, getApplicationContext());
