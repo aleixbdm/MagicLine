@@ -14,80 +14,85 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
         android:id="@+id/linearlayout1"
-        android:layout_marginBottom="@dimen/elements_vertical_margin">
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="@dimen/elements_vertical_margin"
+        android:orientation="horizontal">
 
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
             android:id="@+id/announcements"
-            android:src="@drawable/attention"
-            android:scaleType="fitCenter"
-            android:background="@null" />
-
-        <ImageView
             android:layout_width="0dp"
-            android:layout_weight="0.4"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/logomagicline"
-            android:id="@+id/imageView5"
+            android:layout_weight="0.1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/attention" />
+
+        <TextView
+            android:id="@+id/titol_app"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.4"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:text="@string/titol_app"
+            android:textColor="@color/magicRed"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
             android:id="@+id/facebook"
-            android:src="@drawable/facebook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"
             android:adjustViewBounds="false"
             android:background="@null"
             android:scaleType="fitCenter"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="center" />
+            android:src="@drawable/facebook" />
 
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
             android:id="@+id/twitter"
-            android:src="@drawable/twitter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"
             android:adjustViewBounds="false"
             android:background="@null"
             android:scaleType="fitCenter"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="center" />
+            android:src="@drawable/twitter" />
 
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
             android:id="@+id/instagram"
-            android:src="@drawable/instagram"
-            android:adjustViewBounds="false"
-            android:background="@null"
-            android:scaleType="fitCenter"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center" />
-
-        <ImageButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
             android:layout_weight="0.1"
-            android:id="@+id/youtube"
-            android:src="@drawable/youtube"
             android:adjustViewBounds="false"
             android:background="@null"
             android:scaleType="fitCenter"
-            android:layout_alignParentTop="true"
+            android:src="@drawable/instagram" />
+
+        <ImageButton
+            android:id="@+id/youtube"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_gravity="center" />
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"
+            android:adjustViewBounds="false"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emergency_icon" />
 
     </LinearLayout>
 
@@ -141,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.5"
-                android:background="@drawable/button_style"
+                android:background="@drawable/white_button_style"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="@dimen/elements_vertical_margin2">
 
@@ -150,9 +155,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button1"
                     android:textSize="@dimen/size_text_buttons"
-                    android:textColor="@color/magicRed"
+                    android:textColor="@color/white"
                     android:text="@string/button1"
-                    android:drawableLeft="@drawable/marker"
+                    android:drawableLeft="@drawable/white_map_icon"
                     android:padding="@dimen/padding_buttons"
                     android:background="@null"/>
 
@@ -172,7 +177,7 @@
                     android:textSize="@dimen/size_text_buttons"
                     android:textColor="@color/magicRed"
                     android:text="@string/button2"
-                    android:drawableLeft="@drawable/palette"
+                    android:drawableLeft="@drawable/museum_icon"
                     android:padding="@dimen/padding_buttons"
                     android:background="@null"/>
 
@@ -206,7 +211,7 @@
                     android:textColor="@color/magicRed"
                     android:text="@string/button3"
                     android:textAllCaps="false"
-                    android:drawableLeft="@drawable/smile"
+                    android:drawableLeft="@drawable/music_icon"
                     android:background="@null" />
 
             </FrameLayout>
@@ -225,7 +230,7 @@
                     android:textSize="@dimen/size_text_buttons"
                     android:textColor="@color/magicRed"
                     android:text="@string/button4"
-                    android:drawableLeft="@drawable/phone"
+                    android:drawableLeft="@drawable/picnic_icon"
                     android:padding="@dimen/padding_buttons"
                     android:background="@null"/>
 

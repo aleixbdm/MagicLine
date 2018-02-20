@@ -33,9 +33,9 @@ public class Gimcana extends AppCompatActivity {
         activity = this;
 
         ButtonReturn();
-        ButtonToPremisICondicions();
-        ButtonToPetitExplorador();
-        ButtonToGranExplorador();
+        //ButtonToPremisICondicions();
+        //ButtonToPetitExplorador();
+        //ButtonToGranExplorador();
     }
 
     private void ButtonReturn() {
@@ -58,9 +58,9 @@ public class Gimcana extends AppCompatActivity {
     }
 
     private void ButtonToPremisICondicions() {
-        final Animation premisCondAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
-        premis_condicions = (Button) findViewById(R.id.premis_condicions);
-        premis_condicions.setOnClickListener(new View.OnClickListener() {
+        //final Animation premisCondAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        //premis_condicions = (Button) findViewById(R.id.premis_condicions);
+        /*premis_condicions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {view.startAnimation(premisCondAnimation);}
         });
@@ -74,13 +74,13 @@ public class Gimcana extends AppCompatActivity {
             }
             @Override
             public void onAnimationRepeat(Animation animation) {}
-        });
+        });*/
     }
 
     private void ButtonToPetitExplorador() {
-        final Animation petitExpAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
-        petit_explorador = (ImageButton) findViewById(R.id.button_petit_exp);
-        petit_explorador.setOnClickListener(new View.OnClickListener() {
+        //final Animation petitExpAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        //petit_explorador = (ImageButton) findViewById(R.id.button_petit_exp);
+        /*petit_explorador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {view.startAnimation(petitExpAnimation);}
         });
@@ -94,13 +94,13 @@ public class Gimcana extends AppCompatActivity {
             }
             @Override
             public void onAnimationRepeat(Animation animation) {}
-        });
+        });*/
     }
 
     private void ButtonToGranExplorador() {
-        final Animation granExpAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
-        gran_explorador = (ImageButton) findViewById(R.id.button_gran_exp);
-        gran_explorador.setOnClickListener(new View.OnClickListener() {
+        //final Animation granExpAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        //gran_explorador = (ImageButton) findViewById(R.id.button_gran_exp);
+        /*gran_explorador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {view.startAnimation(granExpAnimation);}
         });
@@ -114,6 +114,6 @@ public class Gimcana extends AppCompatActivity {
             }
             @Override
             public void onAnimationRepeat(Animation animation) {}
-        });
+        });*/
     }
 }

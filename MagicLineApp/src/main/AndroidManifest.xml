@@ -266,6 +266,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PicnicCultural"
+            android:label="@string/title_activity_picnic_cultural"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.obrasocialsjd.magicline.PicnicCultural" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Announcements.AnnouncementActivity"></activity>
     </application>
 

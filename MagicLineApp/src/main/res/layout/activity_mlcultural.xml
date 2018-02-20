@@ -64,16 +64,40 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/intro_mlcultural"
+                android:text="@string/intro_mlcultural1"
                 android:layout_marginTop="10dp"
                 android:textColor="#000000"
-                android:id="@+id/intro_mlcultural"
+                android:id="@+id/intro_mlcultural1"
                 android:layout_centerVertical="true"
                 android:textStyle="normal"
                 android:textSize="18dp"
                 android:padding="10dp"/>
 
-            <LinearLayout
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_noti_web_concert"
+                android:background="@null"
+                android:src="@drawable/noti_web_museus_oberts"
+                android:adjustViewBounds="false"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/intro_mlcultural2"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:id="@+id/intro_mlcultural2"
+                android:layout_centerVertical="true"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:padding="10dp"/>
+
+            <!-- <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/button_size"
                 android:layout_marginTop="@dimen/elements_vertical_margin"
@@ -149,7 +173,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"/>
 
-            </LinearLayout>
+            </LinearLayout> -->
 
         </LinearLayout>
 

@@ -8,7 +8,7 @@
     <string name="InfoMagicLine">Gaudiu del camí, feu volar la imaginació a
     cada pas i deixeu contagiar-vos per l\'esperit de la Magic Line.\nPerò recordeu: <b>amb somiar no en tenim prou!</b></string>
 
-    <string name="titol_SantJoan">Obra Social Sant Joan de Déu</string>
+    <string name="titol_SantJoan">Sant Joan de Déu</string>
     <string name="text_SantJoan">A <b>Sant Joan de Déu</b> atenem persones que es troben en situació de vulnerabilitat. \n \n A Barcelona,
         disposem d’11 centres des d’on fem projectes d’atenció, recerca i cooperació internacional per a persones en situació de
         sense llar, dependència, trastorn mental, amb discpacitat intel·lectual i infants. \n \n
@@ -16,18 +16,26 @@
     </string>
     <string name="pagina_web">solidaritat.santjoandedeu.org</string>
 
-    <string name="SobreApp">Sobre l\'App</string>
+    <string name="SobreApp">APP</string>
     <string name="sobreapp">Aquesta aplicació és el resultat del <b>treball voluntari</b> de quatre estudiants de la Universitat Politècnica de
         Catalunya (UPC) i participants del programa de voluntariat impulsat per un conveni de col·laboració entre la <b>UPC</b> i <b>l’Obra
         Social Sant Joan de Déu</b>. \n \n
         La primera versió que es va posar en marxa va ser creada per <b>Mariona Carós</b> i <b>Joan Febrer</b> i es va utilitzar en la caminada
-        solidària del 28 de Febrer de 2016. La segona i actual versió ha estat dissenyada per <b>Aleix Pellisa</b> i <b>Oriol Baldà</b>. \n \n
+        solidària del 28 de Febrer de 2016. Les versions posteriors han estat dissenyades per <b>Aleix Pellisa</b> i <b>Oriol Baldà</b>. \n \n
         L’app està protegida sota una llicència GPL (GNU), que permet la còpia, distribució i modificació del codi, sempre que es continuï
         distribuint amb la mateixa llicència GPL i es faci esment dels seus autors originals.</string>
 
-    <string name="title_mlcultural">ML Cultural</string>
-    <string name="intro_mlcultural">La Magic Line també és cultura. L\'acollida i l\'acompanyament formen part de l\'essència de Sant Joan de Déu,
-        també el dia de la caminada, per això us oferim propostes culturals al llarg de recorregut.</string>
+    <string name="title_mlcultural">MUSEUS OBERTS</string>
+    <string name="intro_mlcultural1">
+        <b>EQUIPMANENTS CULTURALS OBREN LES PORTES A PARTICIPANTS I VOLUNTARIS DE LA MAGIC LINE SJD</b></string>
+
+    <string name="intro_mlcultural2">
+        El dia de la Magic Line SJD i durant tot el mes de març us oferim accés gratuït a 9 equipaments
+        culturals ensenyant el Passaturons. \n \n
+        Caixa Fòrum / MNAC / Fundació Joan Miró / Fundació Barcelona Olímpica / Jardí Botànic - Museu de Ciències Naturals / Poble Espanyol*
+        / Termes Romanes de Sant Boi de Llobregat / Museu de Sant Boi de Llobregat / Museu de les Aigües de Cornellà \n \n
+        El 25 de febrer, l\'accés està regulat per voluntaris de la Magic Line seguint requeriments d\'horaris i aforament. \n
+        *Poble Espanyol: accés gratuït només el 25 de febrer.</string>
 
     <!--  CONTINGUT MUSEUS GRATUITS  -->
     <string name="title_museus"><b>Museus gratuïts</b></string>
@@ -59,17 +67,40 @@
         i <b>Clams</b>. \n\n En un concert presentat per <b>Joan Dausà</b> amb Manu Danso, Àngels Arnaus, Assumpció Malagarriga, Yoyo Marra, Carlos
         Ariza, Omar Boltes, Fredy Garcia i la Baix Llobregat Music Line.\n\n </string>
 
-    <string name="title_gimcana">Explora Magic Line</string>
-    <string name="intro_gimcana"><b>En col·laboració amb Petit Explorador i Gran Explorador</b></string>
-    <string name="reptes">REPTES AMB PREMI</string>
-    <string name="intro2_gimcana">Comparteix una foto o vídeo d\’aquests reptes a les xarxes socials amb
-        l\'etiqueta: <b>#MagicLine2017</b></string>
+    <string name="title_gimcana">SONAMBULISTES</string>
+    <string name="intro_gimcana"><b>SONAMBULISTES TRENCA ESTIGMES DAMUNT L\'ESCENARI</b></string>
+    <!-- <string name="reptes">REPTES AMB PREMI</string> -->
+    <string name="intro2_gimcana">Diumenge 25 de febrer a les 17h la plaça de la Catedral de Barcelona tindrà lloc <b>l\'espectacle inclusiu \'Sonambulistes\'
+        </b>, una proposta que uneix música, dansa, circ, teatre, màgia, clown i il·lustració, sota la direcció artística de Martí Torras, per trencar estigmes
+        i reflexionar entorn la vulnerabilitat. \n \n
+        Artistes professionals i amateurs de projectes socials recullen l\'esperit d\'equip i cooperació dels participants i voluntaris de la Magic Line
+        Sant Joan de Déu i ens transportaran a un món d\'escales, escaletes i esglaons des d’on es poden aconseguir tots els somnis. Els teus somnis, els
+        meus somnis, els somnis de totes aquelles persones que passen per una situació complicada... els somiar, que tots compartim.</string>
     <string name="proves1_gimcana"><b>-</b> Parla amb un altre equip de la Magic Line \n
         <b>-</b> Dóna les gràcies a un voluntari \n
         <b>-</b> Comparteix un lloc de la ciutat que no coneguessis \n
         <b>-</b> Explica\'ns un moment il·lusionant de la caminada</string>
     <string name="proves2_gimcana">Cada foto o vídeo que pugis amb l\'etiqueta entra a sorteig.</string>
     <string name="premis_condicions">Premis i condicions</string>
+
+    <string name="title_picnic">PICNIC CULTURAL</string>
+    <string name="intro_picnic"><b>PÍCNIC CULTURAL AL CASTELL DE MONTJUÏC</b></string>
+    <!-- <string name="reptes">REPTES AMB PREMI</string> -->
+    <string name="intro2_picnic">Al Fossar del Castell de Montjuïc hi trobaràs un espai de PicNic per parar a descansar per dinar i gaudir de propostes
+        culturals. \n \n
+        <b>Escenari</b> \n
+        11 a 12h DJ J.Trenchs \n
+        12 a 13h Rock familiar amb The Git and Jalis \n
+        13 a 15h Karaoke Band \n
+        15 a 16h La magia de Borja Pérez \n
+        16 a 18h Concert J.Trenchs \n \n
+        <b>Espais de participació</b> \n
+        11h a 16.30h Mural col·laboratiu RefugiArte \n
+        11 a 17h Stop Motion, Artichoke \n
+        11 a 17 h Jocs Cooperatius \n
+        12 a 17.30h Xarxa de les S de Solidaritat \n \n
+        I més sorpreses!</string>
+
 
     <string name="info_premis">Pugeu les fotos a les xarxes socials amb els hashtags <b>#ExploraML</b> i <b>#MagicLine2017</b> i
         entrareu al sorteig de:</string>
@@ -107,10 +138,11 @@
     <string name="title_activity_gran_explorador">Gran explorador</string>
     <string name="title_activity_announcement">Últimes notícies</string>
     <string name="title_activity_instagram">Instagram</string>
+    <string name="title_activity_picnic_cultural">Picnic Cultural</string>
     <string name="button1">MAPA I PUNTS D\'INTERÈS \</string>
-    <string name="button2">ML CULTURAL \</string>
-    <string name="button3">EXPLORA LA ML \</string>
-    <string name="button4">EMERGÈNCIES \</string>
+    <string name="button2">MUSEUS OBERTS \</string>
+    <string name="button3">SONAMBULISTES \</string>
+    <string name="button4">PÍCNIC CULTURAL \</string>
 
     <string name="pop_up_title">TRUCADA D\'EMERGÈNCIES</string>
     <string name="pop_up_question">Vols trucar al 112?</string>
@@ -127,6 +159,7 @@
     <string name="button_route_30km">30</string>
     <string name="button_route_40km">40</string>
 
+    <string name="titol_app">#MagicLine</string>
     <string name="title_notification_default">Magic Line</string>
     <string name="title_announcement_default">Notícia Magic Line</string>
     <string name="body_notification_default">Hi ha una notícia nova!</string>

@@ -38,15 +38,17 @@ public class MainActivity extends AppCompatActivity {
     private static Activity activity;
     private static final String TAG = "DemoButtonApp";
     private Button btnRuta;
-    private Button btnSOS;
     private Button btnMLC;
     private Button btnGim;
     private Button btnSJD;
     private Button btnApp;
+    private Button btnPic;
+    private Button btnSOS;
 
     private static ImageButton facebookbutton;
     private static ImageButton twitterbutton;
     private static ImageButton youtubebutton;
+    private static ImageButton emergenciabutton;
     private static ImageButton instagrambutton;
     private static ImageButton announcements;
 
@@ -72,13 +74,15 @@ public class MainActivity extends AppCompatActivity {
         num_images = 5;
 
         ButtonToMap();
-        ButtonToTrucadaEmergencia();
+        //ButtonToTrucadaEmergencia();
         ButtonToMLCultural();
         ButtonToGimcana();
+        ButtonToPicnicCultural();
         ImageButtontofacebook();
         ImageButtontotwitter();
-        ImageButtontoyoutube();
+        //ImageButtontoyoutube();
         ImageButtontoinstagram();
+        ImageButtontoTrucadaEmergencia();
         CreationImagesViewPager();
         IniciarViewPager();
         ButtonToSobreApp();
@@ -209,8 +213,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void ButtonToTrucadaEmergencia(){
+    public void ButtonToTrucadaEmergencia() {
+        /* Versió 2017
         final Animation emergenciaAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+
         btnSOS = (Button) findViewById(R.id.button4);
         btnSOS.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -245,7 +251,28 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onAnimationRepeat(Animation animation) {}
+        }); */
+    }
+
+    public void ButtonToPicnicCultural(){
+        final Animation picnicAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        btnPic = (Button) findViewById(R.id.button4);
+        btnPic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {view.startAnimation(picnicAnimation);}
         });
+        picnicAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(MainActivity.this, PicnicCultural.class);
+                startActivity(intent);
+            }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
+
     }
 
     private void IniciarViewPager() {
@@ -418,7 +445,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void ImageButtontoyoutube(){
+    private void ImageButtontoyoutube() {
+        /* Versió 2017
         final Animation youtubeAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
         youtubebutton = (ImageButton) findViewById(R.id.youtube);
         youtubebutton.setOnClickListener(new View.OnClickListener() {
@@ -432,6 +460,46 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 Intent intent = new Intent(MainActivity.this, Youtube.class);
                 startActivity(intent);
+            }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });*/
+
+    }
+
+    private void ImageButtontoTrucadaEmergencia(){
+        final Animation emergenciaAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        emergenciabutton = (ImageButton) findViewById(R.id.youtube);
+        emergenciabutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {view.startAnimation(emergenciaAnimation);}
+        });
+        emergenciaAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+
+                //Check permission
+                int permissionCheck = ContextCompat.checkSelfPermission(activity, Manifest.permission.CALL_PHONE);
+                if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(activity, new String[]
+                            {Manifest.permission.CALL_PHONE}, MY_PERMISSION_CALL_PHONE_REQUEST);
+                }
+                else {
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.CustomAlertDialog);
+                    builder.setMessage(R.string.pop_up_question);
+                    builder.setPositiveButton(R.string.pop_up_answer2, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent intent = new Intent(MainActivity.this, Emergencia.class);
+                            startActivity(intent);
+                        }
+                    });
+                    builder.setNegativeButton(R.string.pop_up_answer1, null);
+                    final AlertDialog alertDialog = builder.show();
+                    alertDialog.setTitle(R.string.pop_up_title);
+                }
             }
             @Override
             public void onAnimationRepeat(Animation animation) {}

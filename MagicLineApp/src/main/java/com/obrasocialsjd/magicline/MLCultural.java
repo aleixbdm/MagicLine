@@ -26,16 +26,16 @@ public class MLCultural extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mlcultural);
-        btnConcerts = (Button) findViewById(R.id.concert);
-        btnArts = (Button) findViewById(R.id.arts);
-        btnMuseus = (Button) findViewById(R.id.museus);
+        //btnConcerts = (Button) findViewById(R.id.concert);
+        //btnArts = (Button) findViewById(R.id.arts);
+        //btnMuseus = (Button) findViewById(R.id.museus);
 
         activity = this;
 
         ButtonReturn();
-        ButtonToConcerts();
-        ButtonToArts();
-        ButtonToMuseus();
+        //ButtonToConcerts();
+        //ButtonToArts();
+        //ButtonToMuseus();
     }
 
     private void ButtonReturn() {
